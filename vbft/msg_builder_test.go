@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ontio/ontology/account"
+	"dan-road-vbft/account"
 )
 
 func constructMsg() *blockProposalMsg {

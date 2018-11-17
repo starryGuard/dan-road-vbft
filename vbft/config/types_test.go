@@ -22,7 +22,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"dan-road-vbft/ontology-crypto/keypair"
+	"dan-road-vbft/crypto/keypair"
 )
 
 func TestPubkeyID(t *testing.T) {

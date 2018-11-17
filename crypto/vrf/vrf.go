@@ -25,10 +25,10 @@ import (
 	"errors"
 	"hash"
 
-	"github.com/ontio/ontology-crypto/ec"
-	"github.com/ontio/ontology-crypto/keypair"
-	"github.com/ontio/ontology-crypto/sm3"
-	"github.com/ontio/ontology/common/log"
+	"dan-road-vbft/crypto/ec"
+	"dan-road-vbft/crypto/keypair"
+	"dan-road-vbft/crypto/sm3"
+	"dan-road-vbft/common/log"
 )
 
 var (

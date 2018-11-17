@@ -18,7 +18,7 @@
 package account
 
 import (
-	"github.com/ontio/ontology/core/types"
+	"dan-road-vbft/core/types"
 	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"

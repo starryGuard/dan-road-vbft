@@ -23,7 +23,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/ontio/ontology-crypto/sm2"
+	"dan-road-vbft/crypto/sm2"
 )
 
 const (

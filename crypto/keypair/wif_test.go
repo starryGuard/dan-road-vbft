@@ -22,7 +22,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/ontio/ontology-crypto/ec"
+	"dan-road-vbft/crypto/ec"
 )
 
 var dhex = "46358132e7d8dd2bfc65748e95dc3a36384f6c3d592c1dd578708e8da219d7d4"

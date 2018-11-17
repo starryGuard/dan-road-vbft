@@ -23,13 +23,13 @@ import (
 	"fmt"
 	"time"
 
-	"dan-road-vbft/ontology-crypto/keypair"
-	"github.com/ontio/ontology/common"
-	"github.com/ontio/ontology/common/log"
-	"github.com/ontio/ontology/consensus/vbft/config"
-	"github.com/ontio/ontology/core/ledger"
-	"github.com/ontio/ontology/core/signature"
-	"github.com/ontio/ontology/core/types"
+	"dan-road-vbft/crypto/keypair"
+	"dan-road-vbft/common"
+	"dan-road-vbft/common/log"
+	"dan-road-vbft/consensus/vbft/config"
+	"dan-road-vbft/core/ledger"
+	"dan-road-vbft/core/signature"
+	"dan-road-vbft/core/types"
 )
 
 type ConsensusMsgPayload struct {

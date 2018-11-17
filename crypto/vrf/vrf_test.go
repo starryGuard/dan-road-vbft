@@ -21,7 +21,7 @@ package vrf
 import (
 	"testing"
 
-	"github.com/ontio/ontology-crypto/keypair"
+	"dan-road-vbft/crypto/keypair"
 )
 
 func testVrf(t *testing.T, kt keypair.KeyType, curve byte) {

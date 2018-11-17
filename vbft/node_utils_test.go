@@ -21,9 +21,9 @@ package vbft
 import (
 	"testing"
 
-	"github.com/ontio/ontology/common"
-	"github.com/ontio/ontology/common/log"
-	vconfig "github.com/ontio/ontology/consensus/vbft/config"
+	"dan-road-vbft/common"
+	"dan-road-vbft/common/log"
+	vconfig "dan-road-vbft/consensus/vbft/config"
 )
 
 func peerPool() *PeerPool {

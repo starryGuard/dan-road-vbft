@@ -27,8 +27,8 @@ import (
 	"math/big"
 
 	base58 "github.com/itchyny/base58-go"
-	"github.com/ontio/ontology-crypto/keypair"
-	"github.com/ontio/ontology/core/types"
+	"dan-road-vbft/crypto/keypair"
+	"dan-road-vbft/core/types"
 	"golang.org/x/crypto/ripemd160"
 )
 

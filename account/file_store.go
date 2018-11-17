@@ -25,8 +25,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/ontio/ontology-crypto/keypair"
-	"github.com/ontio/ontology/common"
+	"dan-road-vbft/crypto/keypair"
+	"dan-road-vbft/common"
 )
 
 /** AccountData - for wallet read and save, no crypto object included **/

@@ -23,8 +23,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"dan-road-vbft/ontology-crypto/keypair"
-	"github.com/ontio/ontology/core/types"
+	"dan-road-vbft/crypto/keypair"
+	"dan-road-vbft/core/types"
 )
 
 // PubkeyID returns a marshaled representation of the given public key.

@@ -21,7 +21,7 @@ package vbft
 import (
 	"time"
 
-	"github.com/ontio/ontology/common/log"
+	"dan-road-vbft/common/log"
 )
 
 const (
@@ -35,12 +35,12 @@ type ServerState int
 const (
 	Init ServerState = iota
 	LocalConfigured
-	Configured       // config loaded from chain
-	Syncing          // syncing block from neighbours
-	WaitNetworkReady // sync reached, and keep synced, try connecting with more peers
-	SyncReady        // start processing consensus msg, but not broadcasting proposal/endorse/commit
-	Synced           // start bft
-	SyncingCheck     // potentially lost syncing
+	Configured       // config loaded from chain 从链中加载的配置
+	Syncing          // syncing block from neighbours 从邻节点同步块
+	WaitNetworkReady // sync reached, and keep synced, try connecting with more peers 同步达到，并保持同步，尝试连接更多的peers
+	SyncReady        // start processing consensus msg, but not broadcasting proposal/endorse/commit 开始处理共识消息，但并不广播
+	Synced           // start bft 开始bft
+	SyncingCheck     // potentially lost syncing 可能丢失同步
 )
 
 func isReady(state ServerState) bool {

@@ -23,8 +23,8 @@ import (
 	"sync"
 	"time"
 
-	"dan-road-vbft/ontology-crypto/keypair"
-	"github.com/ontio/ontology/consensus/vbft/config"
+	"dan-road-vbft/crypto/keypair"
+	"dan-road-vbft/vbft/config"
 )
 
 type Peer struct {

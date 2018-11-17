@@ -20,8 +20,8 @@ package account
 
 import (
 	"fmt"
-	"github.com/ontio/ontology-crypto/keypair"
-	s "github.com/ontio/ontology-crypto/signature"
+	"dan-road-vbft/crypto/keypair"
+	s "dan-road-vbft/crypto/signature"
 	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"

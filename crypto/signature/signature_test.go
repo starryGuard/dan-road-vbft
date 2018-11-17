@@ -27,8 +27,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ontio/ontology-crypto/ec"
-	"github.com/ontio/ontology-crypto/keypair"
+	"dan-road-vbft/crypto/ec"
+	"dan-road-vbft/crypto/keypair"
 )
 
 type ecdsaTestCase struct {

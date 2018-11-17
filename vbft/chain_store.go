@@ -21,9 +21,9 @@ package vbft
 import (
 	"fmt"
 
-	"github.com/ontio/ontology/common"
-	"github.com/ontio/ontology/common/log"
-	"github.com/ontio/ontology/core/ledger"
+	"dan-road-vbft/common"
+	"dan-road-vbft/common/log"
+	"dan-road-vbft/core/ledger"
 )
 
 type ChainStore struct {

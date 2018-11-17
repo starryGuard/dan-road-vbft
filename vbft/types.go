@@ -23,10 +23,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/ontio/ontology/common"
-	"github.com/ontio/ontology/common/serialization"
-	vconfig "github.com/ontio/ontology/consensus/vbft/config"
-	"github.com/ontio/ontology/core/types"
+	"dan-road-vbft/common"
+	"dan-road-vbft/common/serialization"
+	vconfig "dan-road-vbft/vbft/config"
+	"dan-road-vbft/core/types"
 	"io"
 )
 

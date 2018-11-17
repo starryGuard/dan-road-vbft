@@ -22,7 +22,7 @@ import (
 	"bytes"
 	"sort"
 
-	"github.com/ontio/ontology-crypto/ec"
+	"dan-road-vbft/crypto/ec"
 
 	"golang.org/x/crypto/ed25519"
 )

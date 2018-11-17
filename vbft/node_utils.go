@@ -23,11 +23,11 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/ontio/ontology/common/log"
-	vconfig "github.com/ontio/ontology/consensus/vbft/config"
-	"github.com/ontio/ontology/core/signature"
-	msgpack "github.com/ontio/ontology/p2pserver/message/msg_pack"
-	p2pmsg "github.com/ontio/ontology/p2pserver/message/types"
+	"dan-road-vbft/common/log"
+	vconfig "dan-road-vbft/consensus/vbft/config"
+	"dan-road-vbft/core/signature"
+	msgpack "dan-road-vbft/p2pserver/message/msg_pack"
+	p2pmsg "dan-road-vbft/p2pserver/message/types"
 )
 
 func (self *Server) GetCurrentBlockNo() uint32 {

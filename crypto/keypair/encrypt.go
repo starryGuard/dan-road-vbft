@@ -25,7 +25,7 @@ import (
 	"crypto/sha256"
 	"errors"
 
-	"github.com/ontio/ontology-crypto/ec"
+	"dan-road-vbft/crypto/ec"
 
 	"golang.org/x/crypto/ed25519"
 	"golang.org/x/crypto/scrypt"

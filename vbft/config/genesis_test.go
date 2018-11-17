@@ -21,9 +21,9 @@ package vconfig
 import (
 	"testing"
 
-	"github.com/ontio/ontology/common"
-	"github.com/ontio/ontology/common/config"
-	"github.com/ontio/ontology/common/log"
+	"dan-road-vbft/common"
+	"dan-road-vbft/common/config"
+	"dan-road-vbft/common/log"
 )
 
 func constructConfig() (*config.VBFTConfig, error) {

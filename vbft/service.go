@@ -1,21 +1,3 @@
-/*
- * Copyright (C) 2018 The ontology Authors
- * This file is part of The ontology library.
- *
- * The ontology is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * The ontology is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with The ontology.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 package vbft
 
 import (
@@ -26,25 +8,25 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ontio/ontology-crypto/keypair"
-	"github.com/ontio/ontology-crypto/vrf"
-	"github.com/ontio/ontology-eventbus/actor"
-	"github.com/ontio/ontology/account"
-	"github.com/ontio/ontology/common"
-	"github.com/ontio/ontology/common/log"
-	actorTypes "github.com/ontio/ontology/consensus/actor"
-	"github.com/ontio/ontology/consensus/vbft/config"
-	"github.com/ontio/ontology/core/ledger"
-	"github.com/ontio/ontology/core/payload"
-	"github.com/ontio/ontology/core/types"
-	"github.com/ontio/ontology/core/utils"
-	"github.com/ontio/ontology/events"
-	"github.com/ontio/ontology/events/message"
-	p2pmsg "github.com/ontio/ontology/p2pserver/message/types"
-	gover "github.com/ontio/ontology/smartcontract/service/native/governance"
-	ninit "github.com/ontio/ontology/smartcontract/service/native/init"
-	nutils "github.com/ontio/ontology/smartcontract/service/native/utils"
-	"github.com/ontio/ontology/validator/increment"
+	"dan-road-vbft/crypto/keypair"
+	"dan-road-vbft/crypto/vrf"
+	"dan-road-vbft/eventbus/actor"
+	"dan-road-vbft/account"
+	"dan-road-vbft/common"
+	"dan-road-vbft/common/log"
+	actorTypes "dan-road-vbft/consensus/actor"
+	"dan-road-vbft/vbft/config"
+	"dan-road-vbft/core/ledger"
+	"dan-road-vbft/core/payload"
+	"dan-road-vbft/core/types"
+	"dan-road-vbft/core/utils"
+	"dan-road-vbft/events"
+	"dan-road-vbft/events/message"
+	p2pmsg "dan-road-vbft/p2pserver/message/types"
+	gover "dan-road-vbft/smartcontract/service/native/governance"
+	ninit "dan-road-vbft/smartcontract/service/native/init"
+	nutils "dan-road-vbft/smartcontract/service/native/utils"
+	"dan-road-vbft/validator/increment"
 )
 
 type BftActionType uint8

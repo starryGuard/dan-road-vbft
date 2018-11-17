@@ -23,8 +23,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ontio/ontology/common/log"
-	"github.com/ontio/ontology/core/ledger"
+	"dan-road-vbft/common/log"
+	"dan-road-vbft/core/ledger"
 )
 
 type SyncCheckReq struct {

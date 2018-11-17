@@ -19,7 +19,7 @@
 package account
 
 import (
-	"github.com/ontio/ontology/common"
+	"dan-road-vbft/common"
 )
 
 type ClientStore interface {

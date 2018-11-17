@@ -23,10 +23,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ontio/ontology/account"
-	"github.com/ontio/ontology/common/config"
-	"github.com/ontio/ontology/common/log"
-	"github.com/ontio/ontology/core/ledger"
+	"dan-road-vbft/account"
+	"dan-road-vbft/common/config"
+	"dan-road-vbft/common/log"
+	"dan-road-vbft/core/ledger"
 )
 
 func newChainStore() *ChainStore {

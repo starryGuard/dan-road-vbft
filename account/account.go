@@ -19,10 +19,10 @@
 package account
 
 import (
-	"github.com/ontio/ontology-crypto/keypair"
-	s "github.com/ontio/ontology-crypto/signature"
-	"github.com/ontio/ontology/common"
-	"github.com/ontio/ontology/core/types"
+	"dan-road-vbft/crypto/keypair"
+	s "dan-road-vbft/crypto/signature"
+	"dan-road-vbft/common"
+	"dan-road-vbft/core/types"
 )
 
 /* crypto object */
