@@ -32,7 +32,7 @@ limitations under the License.
 package mailbox
 
 import (
-	"dan-road-vbft-eventbus/internal/queue/mpsc"
+	"dan-road-vbft/eventbus/internal/queue/mpsc"
 )
 
 // UnboundedLockfree returns a producer which creates an unbounded, lock-free mailbox.

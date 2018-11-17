@@ -33,7 +33,7 @@ limitations under the License.
 package mailbox
 
 import (
-	"dan-road-vbft-eventbus/log"
+	"dan-road-vbft/eventbus/log"
 )
 
 var (

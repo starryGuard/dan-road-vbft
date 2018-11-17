@@ -1,41 +1,23 @@
-/*
- * Copyright (C) 2018 The ontology Authors
- * This file is part of The ontology library.
- *
- * The ontology is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * The ontology is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with The ontology.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 // Package proc provides functions for handle messages from
 // consensus/ledger/net/http/validators
 package proc
 
 import (
 	"bytes"
-	"encoding/hex"
-	"fmt"
-	"dan-road-vbft/eventbus/actor"
 	"dan-road-vbft/common"
 	"dan-road-vbft/common/config"
 	"dan-road-vbft/common/log"
 	"dan-road-vbft/core/ledger"
 	tx "dan-road-vbft/core/types"
 	"dan-road-vbft/errors"
+	"dan-road-vbft/eventbus/actor"
 	httpcom "dan-road-vbft/http/base/common"
 	params "dan-road-vbft/smartcontract/service/native/global_params"
 	nutils "dan-road-vbft/smartcontract/service/native/utils"
 	tc "dan-road-vbft/txnpool/common"
 	"dan-road-vbft/validator/types"
+	"encoding/hex"
+	"fmt"
 	"sort"
 	"strconv"
 	"sync"

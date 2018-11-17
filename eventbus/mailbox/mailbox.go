@@ -35,9 +35,9 @@ import (
 	"runtime"
 	"sync/atomic"
 
+	"dan-road-vbft/eventbus/internal/queue/mpsc"
+	"dan-road-vbft/eventbus/log"
 	"fmt"
-	"dan-road-vbft-eventbus/internal/queue/mpsc"
-	"dan-road-vbft-eventbus/log"
 )
 
 type Statistics interface {

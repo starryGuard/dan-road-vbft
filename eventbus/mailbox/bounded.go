@@ -32,8 +32,8 @@ limitations under the License.
 package mailbox
 
 import (
+	"dan-road-vbft/eventbus/internal/queue/mpsc"
 	rbqueue "github.com/Workiva/go-datastructures/queue"
-	"dan-road-vbft-eventbus/internal/queue/mpsc"
 )
 
 type boundedMailboxQueue struct {
