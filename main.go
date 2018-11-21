@@ -24,6 +24,8 @@ import (
 	"fmt"
 	"github.com/urfave/cli"
 	"os"
+	"os/signal"
+	"syscall"
 )
 
 func main() {
@@ -110,6 +112,7 @@ func startApp(ctx *cli.Context) {
 		return
 	}
 	log.Info(p2pSvr)
+	waitToExit()
 }
 
 func initAccount(ctx *cli.Context) (*account.Account, error) {
@@ -182,7 +185,9 @@ func initLedger(ctx *cli.Context) (*ledger.Ledger, error) {
 	events.Init() //Init event hub
 
 	var err error
-	dbDir := utils.GetStoreDirPath(config.DefConfig.Common.DataDir, config.DefConfig.P2PNode.NetworkName)
+	//dbDir := utils.GetStoreDirPath(config.DefConfig.Common.DataDir, config.DefConfig.P2PNode.NetworkName)
+	dbDir := "./chain/dan"
+	fmt.Println("test-", dbDir)
 	ledger.DefLedger, err = ledger.NewLedger(dbDir)
 	if err != nil {
 		return nil, fmt.Errorf("NewLedger error:%s", err)
@@ -203,4 +208,18 @@ func initLedger(ctx *cli.Context) (*ledger.Ledger, error) {
 
 	log.Infof("Ledger init success")
 	return ledger.DefLedger, nil
+}
+
+func waitToExit() {
+	exit := make(chan bool, 0)
+	sc := make(chan os.Signal, 1)
+	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, syscall.SIGHUP)
+	go func() {
+		for sig := range sc {
+			log.Infof("Ontology received exit signal:%v.", sig.String())
+			close(exit)
+			break
+		}
+	}()
+	<-exit
 }

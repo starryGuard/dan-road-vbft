@@ -156,8 +156,8 @@ func (self *Server) Receive(context actor.Context) {
 	case *actorTypes.StopConsensus:
 		self.stop()
 	case *message.SaveBlockCompleteMsg:
-		log.Infof("vbft actor receives block complete event. block height=%d, numtx=%d",
-			msg.Block.Header.Height, len(msg.Block.Transactions))
+		//log.Infof("vbft actor receives block complete event. block height=%d, numtx=%d",
+		//	msg.Block.Header.Height, len(msg.Block.Transactions))
 		self.handleBlockPersistCompleted(msg.Block)
 	case *p2pmsg.ConsensusPayload:
 		self.NewConsensusPayload(msg)
@@ -181,7 +181,7 @@ func (self *Server) Halt() error {
 }
 
 func (self *Server) handleBlockPersistCompleted(block *types.Block) {
-	log.Infof("persist block: %d, %x", block.Header.Height, block.Hash())
+	//log.Infof("persist block: %d, %x", block.Header.Height, block.Hash())
 
 	self.incrValidator.AddBlock(block)
 
@@ -484,7 +484,9 @@ func (self *Server) start() error {
 	// start peers msg handlers
 	for _, p := range self.config.Peers {
 		peerIdx := p.Index
+		fmt.Println("test-%d", peerIdx)
 		pk := self.peerPool.GetPeerPubKey(peerIdx)
+		fmt.Println("test-%d", pk)
 		if _, present := self.msgRecvC[peerIdx]; !present {
 			self.msgRecvC[peerIdx] = make(chan *p2pMsgPayload, 1024)
 		}
@@ -525,7 +527,9 @@ func (self *Server) stop() error {
 //
 func (self *Server) run(peerPubKey keypair.PublicKey) error {
 	peerID := vconfig.PubkeyID(peerPubKey)
+	fmt.Println("peerID:", peerID)
 	peerIdx, present := self.peerPool.GetPeerIndex(peerID)
+	fmt.Println("peerIdx:", peerIdx)
 	if !present {
 		return fmt.Errorf("invalid consensus node: %s", peerID)
 	}
@@ -556,9 +560,11 @@ func (self *Server) run(peerPubKey keypair.PublicKey) error {
 
 	errC := make(chan error)
 	go func() {
+		fmt.Println("receiveFromPeer:", peerIdx)
 		for {
 			fromPeer, msgData, err := self.receiveFromPeer(peerIdx)
 			if err != nil {
+				fmt.Println(err)
 				errC <- err
 				return
 			}

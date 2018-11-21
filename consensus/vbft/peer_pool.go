@@ -112,7 +112,7 @@ func (pool *PeerPool) waitPeerConnected(peerIdx uint32) error {
 		C = pool.peerConnectionWaitings[peerIdx]
 	}
 	pool.lock.Unlock()
-
+	fmt.Println("end connection")
 	<-C
 	return nil
 }

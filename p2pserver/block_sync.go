@@ -359,7 +359,7 @@ func (this *BlockSyncMgr) syncHeader() {
 		this.appendReqTime(reqNode.GetID())
 	}
 
-	log.Infof("Header sync request height:%d", NextHeaderId)
+	//log.Infof("Header sync request height:%d", NextHeaderId)
 }
 
 func (this *BlockSyncMgr) syncBlock() {
@@ -438,7 +438,7 @@ func (this *BlockSyncMgr) OnHeaderReceive(fromID uint64, headers []*types.Header
 	if len(headers) == 0 {
 		return
 	}
-	log.Infof("Header receive height:%d - %d", headers[0].Height, headers[len(headers)-1].Height)
+	//log.Infof("Header receive height:%d - %d", headers[0].Height, headers[len(headers)-1].Height)
 	height := headers[0].Height
 	curHeaderHeight := this.ledger.GetCurrentHeaderHeight()
 
