@@ -156,8 +156,8 @@ func (self *Server) Receive(context actor.Context) {
 	case *actorTypes.StopConsensus:
 		self.stop()
 	case *message.SaveBlockCompleteMsg:
-		//log.Infof("vbft actor receives block complete event. block height=%d, numtx=%d",
-		//	msg.Block.Header.Height, len(msg.Block.Transactions))
+		log.Infof("vbft actor receives block complete event. block height=%d, numtx=%d",
+			msg.Block.Header.Height, len(msg.Block.Transactions))
 		self.handleBlockPersistCompleted(msg.Block)
 	case *p2pmsg.ConsensusPayload:
 		self.NewConsensusPayload(msg)
@@ -484,9 +484,8 @@ func (self *Server) start() error {
 	// start peers msg handlers
 	for _, p := range self.config.Peers {
 		peerIdx := p.Index
-		fmt.Println("test-%d", peerIdx)
 		pk := self.peerPool.GetPeerPubKey(peerIdx)
-		fmt.Println("test-%d", pk)
+
 		if _, present := self.msgRecvC[peerIdx]; !present {
 			self.msgRecvC[peerIdx] = make(chan *p2pMsgPayload, 1024)
 		}
@@ -527,16 +526,13 @@ func (self *Server) stop() error {
 //
 func (self *Server) run(peerPubKey keypair.PublicKey) error {
 	peerID := vconfig.PubkeyID(peerPubKey)
-	fmt.Println("peerID:", peerID)
 	peerIdx, present := self.peerPool.GetPeerIndex(peerID)
-	fmt.Println("peerIdx:", peerIdx)
 	if !present {
 		return fmt.Errorf("invalid consensus node: %s", peerID)
 	}
 
 	// broadcast heartbeat
 	self.heartbeat()
-
 	// wait remote msgs
 	if err := self.peerPool.waitPeerConnected(peerIdx); err != nil {
 		return err
@@ -560,7 +556,6 @@ func (self *Server) run(peerPubKey keypair.PublicKey) error {
 
 	errC := make(chan error)
 	go func() {
-		fmt.Println("receiveFromPeer:", peerIdx)
 		for {
 			fromPeer, msgData, err := self.receiveFromPeer(peerIdx)
 			if err != nil {
@@ -791,6 +786,7 @@ func (self *Server) onConsensusMsg(peerIdx uint32, msg ConsensusMsg, msgHash com
 				log.Errorf("failed to add proposal msg (%d) to pool", msgBlkNum)
 				return
 			}
+			//处理提议消息
 			self.processProposalMsg(pMsg)
 		}
 
@@ -1033,6 +1029,7 @@ func (self *Server) onConsensusMsg(peerIdx uint32, msg ConsensusMsg, msgHash com
 }
 
 func (self *Server) processProposalMsg(msg *blockProposalMsg) {
+	//获取区块数量
 	msgBlkNum := msg.GetBlockNum()
 	blk, prevBlkHash := self.blockPool.getSealedBlock(msg.GetBlockNum() - 1)
 	if blk == nil {

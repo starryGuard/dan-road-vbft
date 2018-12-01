@@ -327,6 +327,13 @@ var (
 		Usage: "Get block info by block height",
 	}
 
+	//Transfer setting
+	TransactionAssetFlag = cli.StringFlag{
+		Name:  "asset",
+		Usage: "Asset of ONT or ONG",
+		Value: "ont",
+	}
+
 	TransactionFromFlag = cli.StringFlag{
 		Name:  "from",
 		Usage: "Transfer-out account `<address>`",

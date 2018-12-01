@@ -2,6 +2,7 @@ package leveldbstore
 
 import (
 	"dan-road-vbft/core/store/common"
+	"fmt"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/errors"
 	"github.com/syndtr/goleveldb/leveldb/filter"
@@ -30,6 +31,8 @@ func NewLevelDBStore(file string) (*LevelDBStore, error) {
 	}
 
 	db, err := leveldb.OpenFile(file, &o)
+
+	fmt.Println("--------------------------------db", db, err)
 
 	if _, corrupted := err.(*errors.ErrCorrupted); corrupted {
 		db, err = leveldb.RecoverFile(file, nil)

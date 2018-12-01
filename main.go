@@ -2,6 +2,7 @@ package main
 
 import (
 	"dan-road-vbft/account"
+	"dan-road-vbft/cmd"
 	cmdcom "dan-road-vbft/cmd/common"
 	"dan-road-vbft/cmd/utils"
 	"dan-road-vbft/common/config"
@@ -37,6 +38,11 @@ func initApp() *cli.App {
 	app.Usage = "cv-bft"
 	app.Action = startApp
 
+	app.Commands = []cli.Command{
+		cmd.AccountCommand,
+		cmd.AssetCommand,
+		cmd.ImportCommand,
+	}
 	app.Flags = []cli.Flag{
 		//common setting
 		utils.ConfigFlag,
@@ -185,9 +191,8 @@ func initLedger(ctx *cli.Context) (*ledger.Ledger, error) {
 	events.Init() //Init event hub
 
 	var err error
-	//dbDir := utils.GetStoreDirPath(config.DefConfig.Common.DataDir, config.DefConfig.P2PNode.NetworkName)
-	dbDir := "./chain/dan"
-	fmt.Println("test-", dbDir)
+	dbDir := utils.GetStoreDirPath(config.DefConfig.Common.DataDir, config.DefConfig.P2PNode.NetworkName)
+	//dbDir := "./chain/dan"
 	ledger.DefLedger, err = ledger.NewLedger(dbDir)
 	if err != nil {
 		return nil, fmt.Errorf("NewLedger error:%s", err)

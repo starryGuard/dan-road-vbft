@@ -21,10 +21,10 @@ package server
 import (
 	"reflect"
 
-	"github.com/ontio/ontology-eventbus/actor"
-	"github.com/ontio/ontology/common/log"
-	"github.com/ontio/ontology/p2pserver"
-	"github.com/ontio/ontology/p2pserver/common"
+	"dan-road-vbft/common/log"
+	"dan-road-vbft/eventbus/actor"
+	"dan-road-vbft/p2pserver"
+	"dan-road-vbft/p2pserver/common"
 )
 
 type P2PActor struct {
