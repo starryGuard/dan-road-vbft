@@ -1,6 +1,7 @@
 package vrf
 
 import (
+	"fmt"
 	"testing"
 
 	"dan-road-vbft/crypto/keypair"
@@ -8,17 +9,22 @@ import (
 
 func testVrf(t *testing.T, kt keypair.KeyType, curve byte) {
 	pri, pub, err := keypair.GenerateKeyPair(kt, curve)
+	fmt.Println("pri:", pri)
+	fmt.Println("pub:", pub)
 	if err != nil {
 		t.Fatal(err)
 	}
 
 	msg := []byte("test")
 	vrf, proof, err := Vrf(pri, msg)
+	fmt.Println("vrf:", vrf)
+	fmt.Println("proof:", proof)
 	if err != nil {
 		t.Fatalf("compute vrf: %v", err)
 	}
 
 	ret, err := Verify(pub, msg, vrf, proof)
+	fmt.Println("ret:", ret)
 	if err != nil {
 		t.Fatalf("verify vrf: %v", err)
 	}

@@ -1031,13 +1031,16 @@ func (self *Server) onConsensusMsg(peerIdx uint32, msg ConsensusMsg, msgHash com
 func (self *Server) processProposalMsg(msg *blockProposalMsg) {
 	//获取区块数量
 	msgBlkNum := msg.GetBlockNum()
+	//获取前一个已处理的区块及其hash值
 	blk, prevBlkHash := self.blockPool.getSealedBlock(msg.GetBlockNum() - 1)
 	if blk == nil {
 		log.Errorf("BlockProposal failed to GetPreBlock:%d", (msg.GetBlockNum() - 1))
 		return
 	}
 
+	//从消息中获取前一个区块的hash值
 	msgPrevBlkHash := msg.Block.getPrevBlockHash()
+	//比较两个hash值是否相同
 	if prevBlkHash != msgPrevBlkHash {
 		log.Errorf("BlockPrposalMessage check blocknum:%d,prevhash:%s,msg prevhash:%s", msg.GetBlockNum(), prevBlkHash.ToHexString(), msgPrevBlkHash.ToHexString())
 		return
@@ -1057,6 +1060,7 @@ func (self *Server) processProposalMsg(msg *blockProposalMsg) {
 		}
 	}
 
+	//比较前一个块的生成时间与当前时间
 	prevBlockTimestamp := blk.Block.Header.Timestamp
 	currentBlockTimestamp := msg.Block.Block.Header.Timestamp
 	if currentBlockTimestamp <= prevBlockTimestamp || currentBlockTimestamp > uint32(time.Now().Add(time.Minute*10).Unix()) {
@@ -1065,12 +1069,14 @@ func (self *Server) processProposalMsg(msg *blockProposalMsg) {
 	}
 
 	// verify VRF
+	//获取leader的公钥
 	proposerPk := self.peerPool.GetPeerPubKey(msg.Block.getProposer())
 	if proposerPk == nil {
 		log.Errorf("server %d failed to get proposer %d pk of block %d",
 			self.Index, msg.Block.getProposer(), msgBlkNum)
 		return
 	}
+	//验证vrf 入参：leader的公钥，消息中的区块数值，前一个区块的vrf值，消息中的vrf值，消息中的vrf证明
 	if err := verifyVrf(proposerPk, msgBlkNum, blk.getVrfValue(), msg.Block.getVrfValue(), msg.Block.getVrfProof()); err != nil {
 		log.Errorf("server %d failed to verify vrf of block %d proposal from %d",
 			self.Index, msgBlkNum, msg.Block.getProposer())
