@@ -101,6 +101,7 @@ type Server struct {
 	stateMgr   *StateMgr
 	timer      *EventTimer
 
+	//消息接受器，只有在newConsensusPayload时才会放入消息，
 	msgRecvC   map[uint32]chan *p2pMsgPayload
 	msgC       chan ConsensusMsg
 	bftActionC chan *BftAction
@@ -140,6 +141,7 @@ func NewVbftServer(account *account.Account, txpool, p2p *actor.PID) (*Server, e
 }
 
 func (self *Server) Receive(context actor.Context) {
+	fmt.Println("------------Receive", context.Message())
 	switch msg := context.Message().(type) {
 	case *actor.Restarting:
 		log.Info("vbft actor restarting")
@@ -159,6 +161,7 @@ func (self *Server) Receive(context actor.Context) {
 		log.Infof("vbft actor receives block complete event. block height=%d, numtx=%d",
 			msg.Block.Header.Height, len(msg.Block.Transactions))
 		self.handleBlockPersistCompleted(msg.Block)
+	//p2pmsg.ConsensusPayload只有在 broadcastToAll 和sendToPeer中才会创建
 	case *p2pmsg.ConsensusPayload:
 		self.NewConsensusPayload(msg)
 
@@ -411,6 +414,7 @@ func (self *Server) initialize() error {
 	self.msgSendC = make(chan *SendMsgEvent, CAP_MSG_SEND_CHANNEL)
 
 	self.quitC = make(chan struct{})
+	//加载链配置
 	if err := self.LoadChainConfig(store); err != nil {
 		log.Errorf("failed to load config: %s", err)
 		return fmt.Errorf("failed to load config: %s", err)
@@ -537,6 +541,8 @@ func (self *Server) run(peerPubKey keypair.PublicKey) error {
 	if err := self.peerPool.waitPeerConnected(peerIdx); err != nil {
 		return err
 	}
+
+	fmt.Println("---------------------waitPeerConnected already")
 
 	defer func() {
 		// TODO: handle peer disconnection here

@@ -5,6 +5,7 @@ import (
 	"dan-road-vbft/cmd"
 	cmdcom "dan-road-vbft/cmd/common"
 	"dan-road-vbft/cmd/utils"
+	"dan-road-vbft/common"
 	"dan-road-vbft/common/config"
 	"dan-road-vbft/common/log"
 	"dan-road-vbft/consensus"
@@ -26,6 +27,7 @@ import (
 	"github.com/urfave/cli"
 	"os"
 	"os/signal"
+	"runtime"
 	"syscall"
 )
 
@@ -87,10 +89,22 @@ func initApp() *cli.App {
 		utils.WsEnabledFlag,
 		utils.WsPortFlag,
 	}
+
+	app.Before = func(context *cli.Context) error {
+		runtime.GOMAXPROCS(runtime.NumCPU())
+		return nil
+	}
+
 	return app
 }
 
 func startApp(ctx *cli.Context) {
+	_, err := initConfig(ctx)
+	if err != nil {
+		log.Errorf("initConfig error:%s", err)
+		return
+	}
+
 	acc, err := initAccount(ctx)
 	if err != nil {
 		log.Errorf("initWallet error:%s", err)
@@ -121,7 +135,27 @@ func startApp(ctx *cli.Context) {
 	waitToExit()
 }
 
+func initConfig(ctx *cli.Context) (*config.OntologyConfig, error) {
+	//init ontology config from cli
+	cfg, err := cmd.SetOntologyConfig(ctx)
+	if err != nil {
+		return nil, err
+	}
+	log.Infof("Config init success")
+	return cfg, nil
+}
+
 func initAccount(ctx *cli.Context) (*account.Account, error) {
+	if !config.DefConfig.Consensus.EnableConsensus {
+		return nil, nil
+	}
+	walletFile := ctx.GlobalString(utils.GetFlagName(utils.WalletFileFlag))
+	if walletFile == "" {
+		return nil, fmt.Errorf("Please config wallet file using --wallet flag")
+	}
+	if !common.FileExisted(walletFile) {
+		return nil, fmt.Errorf("Cannot find wallet file:%s. Please create wallet first", walletFile)
+	}
 	acc, err := cmdcom.GetAccount(ctx)
 	return acc, err
 }

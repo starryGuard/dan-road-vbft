@@ -98,6 +98,7 @@ func (pool *PeerPool) getActivePeerCount() int {
 }
 
 func (pool *PeerPool) waitPeerConnected(peerIdx uint32) error {
+	fmt.Println("----------------waitPeerConnected peerIdx", peerIdx)
 	if !pool.isNewPeer(peerIdx) {
 		// peer already connected
 		return nil
@@ -106,17 +107,13 @@ func (pool *PeerPool) waitPeerConnected(peerIdx uint32) error {
 	var C chan struct{}
 	pool.lock.Lock()
 	if _, present := pool.peerConnectionWaitings[peerIdx]; !present {
-		fmt.Println("------------------waitPeerConnected present")
 		C = make(chan struct{})
 		pool.peerConnectionWaitings[peerIdx] = C
 	} else {
-		fmt.Println("------------------waitPeerConnected not present")
 		C = pool.peerConnectionWaitings[peerIdx]
 	}
 	pool.lock.Unlock()
-	fmt.Println("-----------------waitPeerConnected")
 	<-C
-	fmt.Println("----------------waitPeerConnected after")
 	return nil
 }
 

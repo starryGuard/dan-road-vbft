@@ -16,7 +16,7 @@ import (
 	"dan-road-vbft/errors"
 )
 
-var Version = "" //Set value when build project
+var Version = "1" //Set value when build project
 
 const (
 	DEFAULT_CONFIG_FILE_NAME = "./config.json"
@@ -186,38 +186,38 @@ var MainNetConfig = &GenesisConfig{
 		Peers: []*VBFTPeerStakeInfo{
 			{
 				Index:      1,
-				PeerPubkey: "03348c8fe64e1defb408676b6e320038bd2e592c802e27c3d7e88e68270076c2f7",
-				Address:    "AZavFr7sQ4em2NmqWDjLMY34tHMQzATWgx",
+				PeerPubkey: "037c9e6c6a446b6b296f89b722cbf686b81e0a122444ef05f0f87096777663284b",
+				Address:    "AXmQDzzvpEtPkNwBEFsREzApTTDZFW6frD",
 			},
 			{
 				Index:      2,
-				PeerPubkey: "03afd920a3b4ce2e7175a32c0d092153d1a11ef5e0dcc14e71c85101b95518d5d7",
-				Address:    "AM9jHMV7xY4HWH2dWmzyxrtnbi6ErNt7oL",
+				PeerPubkey: "03dff4c63267ae5e23da44ace1bc47d0da1eb8d36fd71181dcccf0e872cb7b31fa",
+				Address:    "AY5W6p4jHeZG2jjW6nS1p4KDUhcqLkU6jz",
 			},
 			{
 				Index:      3,
-				PeerPubkey: "03e818b65a66d983a99497e06c6552ee5067229e85ba1cec60c5477dc3d568ed43",
-				Address:    "ATECwFPNRZFydFR1yUjb6RTLfVcKGKWRmp",
+				PeerPubkey: "0205bc592aa9121428c4144fcd669ece1fa73fee440616c75624967f83fb881050",
+				Address:    "ALZVrZrFqoSvqyi38n7mpPoeDp7DMtZ9b6",
 			},
 			{
 				Index:      4,
-				PeerPubkey: "02375e44e500f9cfe8bd2f4afa4a016a8a902567996c919b9d1ce4f5d4f930f145",
-				Address:    "AKMxTuHQtt5YspXNPwkQNP5ZY66c4LY5BR",
+				PeerPubkey: "030a34dcb075d144df1f65757b85acaf053395bb47b019970607d2d1cdd222525c",
+				Address:    "AMogjmLf2QohTcGST7niV75ekZfj44SKme",
 			},
 			{
 				Index:      5,
-				PeerPubkey: "03af040c09af5e06cf966f73fc99e8f4372f1510fe6e4376824452a99b85695a9c",
-				Address:    "AT4fXp36Ui22Lbh5ZJUCRBFDJ7axkLyUFM",
+				PeerPubkey: "021844159f97d81da71da52f84e8451ee573c83b296ff2446387b292e44fba5c98",
+				Address:    "AZzQTkZvjy7ih9gjvwU8KYiZZyNoy6jE9p",
 			},
 			{
 				Index:      6,
-				PeerPubkey: "034ee2a4368e999fc7c04e7e3a9073162d47712382f1690d6a67e7e1c475cd0ff3",
-				Address:    "ANLRokqieUtrUMave66FcNy2cxV7Whf4UN",
+				PeerPubkey: "020cc76feb375d6ea8ec9ff653bab18b6bbc815610cecc76e702b43d356f885835",
+				Address:    "AKEqQKmxCsjWJz8LPGryXzb6nN5fkK1WDY",
 			},
 			{
 				Index:      7,
-				PeerPubkey: "0327f9e0fb3b894027c52caf3d31d9ac5f676d3cf892c933ac107ed7447fb6e65b",
-				Address:    "AVRD9QmkYNq8n8DXc9AqpZnUEYhjg1aq5L",
+				PeerPubkey: "03aa4d52b200fd91ca12deff46505c4608a0f66d28d9ae68a342c8a8c1266de0f9",
+				Address:    "AQNpGWz4oHHFBejtBbakeR43DHfen7cm8L",
 			},
 		},
 	},

@@ -14,13 +14,19 @@ SRC_FILES = $(shell git ls-files | grep -e .go$ | grep -v _test.go)
 dan-road-vbft: $(SRC_FILES)
 	$(GC)  $(BUILD_NODE_PAR) -o dan-road-vbft main.go
 
-docker/payload: docker/build/bin/dan-road-vbft docker/Dockerfile
+
+format:
+	$(GOFMT) -w main.go
+
+docker/payload: docker/build/bin/cvbft docker/Dockerfile
+	@echo "Building cvbft payload"
 	@mkdir -p $@
 	@cp docker/Dockerfile $@
-	@cp docker/build/bin/dan-road-vbft $@
+	@cp docker/build/bin/cvbft $@
 	@touch $@
 
 docker/build/bin/%: Makefile
+	@echo "Building cvbft in docker"
 	@mkdir -p docker/build/bin docker/build/pkg
 	@$(DRUN) --rm \
 		-v $(abspath docker/build/bin):/go/bin \
@@ -28,10 +34,11 @@ docker/build/bin/%: Makefile
 		-v $(GOPATH)/src:/go/src \
 		-w /go/src/dan-road-vbft \
 		golang:1.9.5-stretch \
-		$(GC)  $(BUILD_NODE_PAR) -o /docker/build/bin/dan-road-vbft main.go
+		$(GC)  $(BUILD_NODE_PAR) -o docker/build/bin/cvbft main.go
 	@touch $@
 
 docker: Makefile docker/payload docker/Dockerfile
-	@$(DBUILD) -t $(DOCKER_NS)/dan-road-vbft docker/payload
-	@docker tag $(DOCKER_NS)/dan-road-vbft $(DOCKER_NS)/dan-road-vbft:$(DOCKER_TAG)
+	@echo "Building cvbft docker"
+	@$(DBUILD) -t $(DOCKER_NS)/cvbft docker/payload
+	@docker tag $(DOCKER_NS)/cvbft $(DOCKER_NS)/cvbft:$(DOCKER_TAG)
 	@touch $@
