@@ -186,28 +186,28 @@ var MainNetConfig = &GenesisConfig{
 		Peers: []*VBFTPeerStakeInfo{
 			{
 				Index:      1,
-				PeerPubkey: "037c9e6c6a446b6b296f89b722cbf686b81e0a122444ef05f0f87096777663284b",
-				Address:    "AXmQDzzvpEtPkNwBEFsREzApTTDZFW6frD",
+				PeerPubkey: "036dab5f0d678f5e2d4226ebb8f644a6d78b864c199a7bb19369d3a6aba05b8154",
+				Address:    "ANRryVJESVNodWvtVcrkLqMimzqGe7jBSZ",
 			},
 			{
 				Index:      2,
-				PeerPubkey: "03dff4c63267ae5e23da44ace1bc47d0da1eb8d36fd71181dcccf0e872cb7b31fa",
-				Address:    "AY5W6p4jHeZG2jjW6nS1p4KDUhcqLkU6jz",
+				PeerPubkey: "02327b7c7f7356f12c6fdfc2953e19a766635e97708083d71bf4439f6e453feeb2",
+				Address:    "AGna5UaixJTZcUkijCnM8n8hifmjCySjTc",
 			},
 			{
 				Index:      3,
-				PeerPubkey: "0205bc592aa9121428c4144fcd669ece1fa73fee440616c75624967f83fb881050",
-				Address:    "ALZVrZrFqoSvqyi38n7mpPoeDp7DMtZ9b6",
+				PeerPubkey: "037e0c340bd4cbbffe3b42fd91f712ae2ee49de4c869ad34ca5bebd6c6c9ee7d25",
+				Address:    "ANVh8TXJyKMDbznoHjpo6npEAnvtS2v3zs",
 			},
 			{
 				Index:      4,
-				PeerPubkey: "030a34dcb075d144df1f65757b85acaf053395bb47b019970607d2d1cdd222525c",
-				Address:    "AMogjmLf2QohTcGST7niV75ekZfj44SKme",
+				PeerPubkey: "030d8166975bd11851c29e2047029bc4923762809269ba7c5b7f3b604f72ad0a60",
+				Address:    "AJBpGH46Npzb4GCiL53sWmEghUsZLJFei8",
 			},
 			{
 				Index:      5,
-				PeerPubkey: "021844159f97d81da71da52f84e8451ee573c83b296ff2446387b292e44fba5c98",
-				Address:    "AZzQTkZvjy7ih9gjvwU8KYiZZyNoy6jE9p",
+				PeerPubkey: "035cfa477baf4bf25fae25a86ddd81d205b160b53df352773b16e501d75c8ef05b",
+				Address:    "AQ9WSYkeRcp9baMsgCCDGXJ4gaS9LVXYCq",
 			},
 			{
 				Index:      6,

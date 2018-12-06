@@ -23,6 +23,7 @@ docker/payload: docker/build/bin/cvbft docker/Dockerfile
 	@mkdir -p $@
 	@cp docker/Dockerfile $@
 	@cp docker/build/bin/cvbft $@
+	@cp wallet.dat $@
 	@touch $@
 
 docker/build/bin/%: Makefile
@@ -42,3 +43,6 @@ docker: Makefile docker/payload docker/Dockerfile
 	@$(DBUILD) -t $(DOCKER_NS)/cvbft docker/payload
 	@docker tag $(DOCKER_NS)/cvbft $(DOCKER_NS)/cvbft:$(DOCKER_TAG)
 	@touch $@
+
+clean:
+	rm -rf docker/payload docker/build

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"dan-road-vbft/account"
 	"dan-road-vbft/cmd"
 	cmdcom "dan-road-vbft/cmd/common"
@@ -28,6 +29,7 @@ import (
 	"os"
 	"os/signal"
 	"runtime"
+	"strings"
 	"syscall"
 )
 
@@ -146,9 +148,9 @@ func initConfig(ctx *cli.Context) (*config.OntologyConfig, error) {
 }
 
 func initAccount(ctx *cli.Context) (*account.Account, error) {
-	if !config.DefConfig.Consensus.EnableConsensus {
-		return nil, nil
-	}
+	//if !config.DefConfig.Consensus.EnableConsensus {
+	//	return nil, nil
+	//}
 	walletFile := ctx.GlobalString(utils.GetFlagName(utils.WalletFileFlag))
 	if walletFile == "" {
 		return nil, fmt.Errorf("Please config wallet file using --wallet flag")
@@ -156,7 +158,11 @@ func initAccount(ctx *cli.Context) (*account.Account, error) {
 	if !common.FileExisted(walletFile) {
 		return nil, fmt.Errorf("Cannot find wallet file:%s. Please create wallet first", walletFile)
 	}
-	acc, err := cmdcom.GetAccount(ctx)
+	fmt.Printf("Address:")
+	addressReader := bufio.NewReader(os.Stdin)
+	address, err := addressReader.ReadString('\n')
+	address = strings.Replace(address, "\n", "", -1)
+	acc, err := cmdcom.GetAccount(ctx, address)
 	return acc, err
 }
 

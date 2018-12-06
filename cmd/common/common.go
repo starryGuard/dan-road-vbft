@@ -122,7 +122,6 @@ func GetAccount(ctx *cli.Context, address ...string) (*account.Account, error) {
 		return nil, err
 	}
 	passwd, err := GetPasswd(ctx)
-
 	if err != nil {
 		return nil, err
 	}
