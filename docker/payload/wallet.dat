@@ -20,7 +20,7 @@
             "label":"",
             "publicKey":"036dab5f0d678f5e2d4226ebb8f644a6d78b864c199a7bb19369d3a6aba05b8154",
             "signatureScheme":"SHA256withECDSA",
-            "isDefault":false,
+            "isDefault":true,
             "lock":false
         },
         {
@@ -36,7 +36,7 @@
             "publicKey":"02327b7c7f7356f12c6fdfc2953e19a766635e97708083d71bf4439f6e453feeb2",
             "signatureScheme":"SHA256withECDSA",
             "isDefault":false,
-            "lock":true
+            "lock":false
         },
         {
             "address":"ANVh8TXJyKMDbznoHjpo6npEAnvtS2v3zs",

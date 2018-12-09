@@ -52,7 +52,7 @@ const (
 	DEFAULT_GAS_LIMIT                       = 20000
 	DEFAULT_GAS_PRICE                       = 500
 
-	DEFAULT_DATA_DIR      = "./Chain"
+	DEFAULT_DATA_DIR      = "./chain"
 	DEFAULT_RESERVED_FILE = "./peers.rsv"
 )
 

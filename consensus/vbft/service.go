@@ -103,7 +103,8 @@ type Server struct {
 	timer      *EventTimer
 
 	//消息接受器，只有在newConsensusPayload时才会放入消息，
-	msgRecvC   map[uint32]chan *p2pMsgPayload
+	msgRecvC map[uint32]chan *p2pMsgPayload
+	//共识消息接受器
 	msgC       chan ConsensusMsg
 	bftActionC chan *BftAction
 	msgSendC   chan *SendMsgEvent
@@ -142,7 +143,6 @@ func NewVbftServer(account *account.Account, txpool, p2p *actor.PID) (*Server, e
 }
 
 func (self *Server) Receive(context actor.Context) {
-	fmt.Println("------------Receive", context.Message())
 	switch msg := context.Message().(type) {
 	case *actor.Restarting:
 		log.Info("vbft actor restarting")
@@ -539,11 +539,10 @@ func (self *Server) run(peerPubKey keypair.PublicKey) error {
 	// broadcast heartbeat
 	self.heartbeat()
 	// wait remote msgs
+	//可暂时忽略链接
 	if err := self.peerPool.waitPeerConnected(peerIdx); err != nil {
 		return err
 	}
-
-	fmt.Println("---------------------waitPeerConnected already")
 
 	defer func() {
 		// TODO: handle peer disconnection here
@@ -742,6 +741,7 @@ func (self *Server) onConsensusMsg(peerIdx uint32, msg ConsensusMsg, msgHash com
 
 	switch msg.Type() {
 	case BlockProposalMessage:
+		fmt.Println("onConsensusMsg BlockProposalMessage")
 		pMsg, ok := msg.(*blockProposalMsg)
 		if !ok {
 			log.Error("invalid msg with proposal msg type")
@@ -798,6 +798,7 @@ func (self *Server) onConsensusMsg(peerIdx uint32, msg ConsensusMsg, msgHash com
 		}
 
 	case BlockEndorseMessage:
+		fmt.Println("onConsensusMsg BlockEndorseMessage")
 		pMsg, ok := msg.(*blockEndorseMsg)
 		if !ok {
 			log.Error("invalid msg with endorse msg type")
@@ -855,6 +856,7 @@ func (self *Server) onConsensusMsg(peerIdx uint32, msg ConsensusMsg, msgHash com
 		}
 
 	case BlockCommitMessage:
+		fmt.Println("onConsensusMsg BlockCommitMessage")
 		pMsg, ok := msg.(*blockCommitMsg)
 		if !ok {
 			log.Error("invalid msg with commit msg type")

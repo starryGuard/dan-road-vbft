@@ -35,8 +35,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/emirpasic/gods/stacks/linkedliststack"
 	"dan-road-vbft/eventbus/log"
+	"github.com/emirpasic/gods/stacks/linkedliststack"
 )
 
 type localContext struct {
@@ -270,7 +270,6 @@ func (ctx *localContext) InvokeUserMessage(md interface{}) {
 
 func (ctx *localContext) processMessage(m interface{}) {
 	ctx.message = m
-
 	if ctx.inboundMiddleware != nil {
 		ctx.inboundMiddleware(ctx)
 	} else {

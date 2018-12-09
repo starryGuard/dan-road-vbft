@@ -98,7 +98,6 @@ func (pool *PeerPool) getActivePeerCount() int {
 }
 
 func (pool *PeerPool) waitPeerConnected(peerIdx uint32) error {
-	fmt.Println("----------------waitPeerConnected peerIdx", peerIdx)
 	if !pool.isNewPeer(peerIdx) {
 		// peer already connected
 		return nil
