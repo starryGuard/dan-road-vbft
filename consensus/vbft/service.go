@@ -2,7 +2,6 @@ package vbft
 
 import (
 	"bytes"
-	"encoding/json"
 	"fmt"
 	"math"
 	"reflect"
@@ -2021,7 +2020,6 @@ func (self *Server) msgSendLoop() {
 				continue
 			}
 			payload, err := SerializeVbftMsg(evt.Msg)
-			fmt.Println(json.Unmarshal(payload, &ConsensusMsgPayload{}))
 			if err != nil {
 				log.Errorf("server %d failed to serialized msg (type: %d): %s", self.Index, evt.Msg.Type(), err)
 				continue
