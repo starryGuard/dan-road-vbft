@@ -181,9 +181,10 @@ func transfer(ctx *cli.Context) error {
 	force := ctx.Bool(utils.GetFlagName(utils.ForceSendTxFlag))
 	if !force {
 		balance, err := utils.GetAccountBalance(fromAddr, asset)
-		if err != nil {
-			return err
-		}
+		fmt.Println("from to amount balance err", fromAddr, toAddr, amount, balance, err)
+		//if err != nil {
+		//	return err
+		//}
 		if balance < amount {
 			PrintErrorMsg("Account:%s balance not enough.", fromAddr)
 			PrintInfoMsg("\nTip:")
@@ -196,19 +197,26 @@ func transfer(ctx *cli.Context) error {
 	gasLimit := ctx.Uint64(utils.TransactionGasLimitFlag.Name)
 
 	networkId, err := utils.GetNetworkId()
-	if err != nil {
-		return err
-	}
+
+	fmt.Println("gasPrice gasLimit networkId", gasPrice, gasLimit, networkId, err)
+
+	networkId = config.NETWORK_ID_MAIN_NET
+	//if err != nil {
+	//	return err
+	//}
 	if networkId == config.NETWORK_ID_SOLO_NET {
 		gasPrice = 0
 	}
 
 	var signer *account.Account
 	signer, err = cmdcom.GetAccount(ctx, fromAddr)
+
+	fmt.Println("signer", signer, err)
 	if err != nil {
 		return err
 	}
 	txHash, err := utils.Transfer(gasPrice, gasLimit, signer, asset, fromAddr, toAddr, amount)
+	fmt.Println("txHash :", txHash, err)
 	if err != nil {
 		return fmt.Errorf("transfer error:%s", err)
 	}

@@ -65,6 +65,7 @@ func init() {
 
 //Return balance of address in base58 code
 func GetBalance(address string) (*httpcom.BalanceOfRsp, error) {
+	//查询该地址余额
 	result, ontErr := sendRpcRequest("getbalance", []interface{}{address})
 	if ontErr != nil {
 		switch ontErr.ErrorCode {

@@ -569,7 +569,6 @@ func (self *Server) run(peerPubKey keypair.PublicKey) error {
 				return
 			}
 			msg, err := DeserializeVbftMsg(msgData)
-
 			if err != nil {
 				log.Errorf("server %d failed to deserialize vbft msg (len %d): %s", self.Index, len(msgData), err)
 			} else {

@@ -16,6 +16,7 @@ import (
 	"dan-road-vbft/events"
 	bactor "dan-road-vbft/http/base/actor"
 	hserver "dan-road-vbft/http/base/actor"
+	"dan-road-vbft/http/jsonrpc"
 	"dan-road-vbft/p2pserver"
 	netreqactor "dan-road-vbft/p2pserver/actor/req"
 	p2pactor "dan-road-vbft/p2pserver/actor/server"
@@ -31,6 +32,7 @@ import (
 	"runtime"
 	"strings"
 	"syscall"
+	"time"
 )
 
 func main() {
@@ -134,6 +136,11 @@ func startApp(ctx *cli.Context) {
 		return
 	}
 	log.Info(p2pSvr)
+	err = initRpc(ctx)
+	if err != nil {
+		log.Errorf("initRpc error:%s", err)
+		return
+	}
 	waitToExit()
 }
 
@@ -253,6 +260,30 @@ func initLedger(ctx *cli.Context) (*ledger.Ledger, error) {
 
 	log.Infof("Ledger init success")
 	return ledger.DefLedger, nil
+}
+
+func initRpc(ctx *cli.Context) error {
+	if !config.DefConfig.Rpc.EnableHttpJsonRpc {
+		return nil
+	}
+	var err error
+	exitCh := make(chan interface{}, 0)
+	go func() {
+		err = jsonrpc.StartRPCServer()
+		close(exitCh)
+	}()
+
+	flag := false
+	select {
+	case <-exitCh:
+		if !flag {
+			return err
+		}
+	case <-time.After(time.Millisecond * 5):
+		flag = true
+	}
+	log.Infof("Rpc init success")
+	return nil
 }
 
 func waitToExit() {

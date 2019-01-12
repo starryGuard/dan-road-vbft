@@ -84,6 +84,8 @@ func sendRpcRequest(method string, params []interface{}) ([]byte, *OntologyError
 
 	addr := fmt.Sprintf("http://localhost:%d", config.DefConfig.Rpc.HttpJsonPort)
 	resp, err := http.Post(addr, "application/json", strings.NewReader(string(data)))
+	//fmt.Println("rpcReq addr resp",rpcReq, addr, resp, err)
+	//rpcReq addr resp &{2.0 cli getbalance [AJBpGH46Npzb4GCiL53sWmEghUsZLJFei8]} http://localhost:20336 <nil> Post http://localhost:20336: dial tcp [::1]:20336: connect: connection refused
 	if err != nil {
 		return nil, NewOntologyError(err)
 	}
