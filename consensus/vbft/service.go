@@ -633,9 +633,10 @@ func (self *Server) updateParticipantConfig() error {
 	return nil
 }
 
+//startNewRound
 func (self *Server) startNewRound() error {
 	blkNum := self.GetCurrentBlockNo()
-
+	log.Info("startNewRound")
 	if err := self.updateParticipantConfig(); err != nil {
 		log.Errorf("startNewRound error:%s", err)
 		return err
@@ -1076,20 +1077,21 @@ func (self *Server) processProposalMsg(msg *blockProposalMsg) {
 	}
 
 	// verify VRF
-	//获取leader的公钥
+	//获取提案者的公钥
 	proposerPk := self.peerPool.GetPeerPubKey(msg.Block.getProposer())
 	if proposerPk == nil {
 		log.Errorf("server %d failed to get proposer %d pk of block %d",
 			self.Index, msg.Block.getProposer(), msgBlkNum)
 		return
 	}
-	//验证vrf 入参：leader的公钥，消息中的区块数值，前一个区块的vrf值，消息中的vrf值，消息中的vrf证明
+	//验证vrf 入参：提案者的公钥，消息中的区块数值，前一个区块的vrf值，消息中的vrf值，消息中的vrf证明
 	if err := verifyVrf(proposerPk, msgBlkNum, blk.getVrfValue(), msg.Block.getVrfValue(), msg.Block.getVrfProof()); err != nil {
 		log.Errorf("server %d failed to verify vrf of block %d proposal from %d",
 			self.Index, msgBlkNum, msg.Block.getProposer())
 		return
 	}
 
+	//
 	txs := msg.Block.Block.Transactions
 	if len(txs) > 0 && self.nonSystxs(txs, msgBlkNum) {
 		height := uint32(msgBlkNum) - 1
@@ -1137,7 +1139,7 @@ func (self *Server) processMsgEvent() error {
 	select {
 	case msg := <-self.msgC:
 
-		log.Debugf("server %d process msg, block %d, type %d, current blk %d",
+		log.Info("server %d process msg, block %d, type %d, current blk %d",
 			self.Index, msg.GetBlockNum(), msg.Type(), self.GetCurrentBlockNo())
 
 		switch msg.Type() {

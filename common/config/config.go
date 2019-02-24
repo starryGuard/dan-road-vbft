@@ -93,94 +93,27 @@ func GetNetworkName(id uint32) string {
 	return fmt.Sprintf("%d", id)
 }
 
-var PolarisConfig = &GenesisConfig{
-	SeedList: []string{
-		"polaris1.ont.io:20338",
-		"polaris2.ont.io:20338",
-		"polaris3.ont.io:20338",
-		"polaris4.ont.io:20338"},
-	ConsensusType: CONSENSUS_TYPE_VBFT,
-	VBFT: &VBFTConfig{
-		N:                    7,
-		C:                    2,
-		K:                    7,
-		L:                    112,
-		BlockMsgDelay:        10000,
-		HashMsgDelay:         10000,
-		PeerHandshakeTimeout: 10,
-		MaxBlockChangeView:   3000,
-		AdminOntID:           "did:ont:AMAx993nE6NEqZjwBssUfopxnnvTdob9ij",
-		MinInitStake:         10000,
-		VrfValue:             "1c9810aa9822e511d5804a9c4db9dd08497c31087b0daafa34d768a3253441fa20515e2f30f81741102af0ca3cefc4818fef16adb825fbaa8cad78647f3afb590e",
-		VrfProof:             "c57741f934042cb8d8b087b44b161db56fc3ffd4ffb675d36cd09f83935be853d8729f3f5298d12d6fd28d45dde515a4b9d7f67682d182ba5118abf451ff1988",
-		Peers: []*VBFTPeerStakeInfo{
-			{
-				Index:      1,
-				PeerPubkey: "037c9e6c6a446b6b296f89b722cbf686b81e0a122444ef05f0f87096777663284b",
-				Address:    "AXmQDzzvpEtPkNwBEFsREzApTTDZFW6frD",
-				InitPos:    10000,
-			},
-			{
-				Index:      2,
-				PeerPubkey: "03dff4c63267ae5e23da44ace1bc47d0da1eb8d36fd71181dcccf0e872cb7b31fa",
-				Address:    "AY5W6p4jHeZG2jjW6nS1p4KDUhcqLkU6jz",
-				InitPos:    20000,
-			},
-			{
-				Index:      3,
-				PeerPubkey: "0205bc592aa9121428c4144fcd669ece1fa73fee440616c75624967f83fb881050",
-				Address:    "ALZVrZrFqoSvqyi38n7mpPoeDp7DMtZ9b6",
-				InitPos:    30000,
-			},
-			{
-				Index:      4,
-				PeerPubkey: "030a34dcb075d144df1f65757b85acaf053395bb47b019970607d2d1cdd222525c",
-				Address:    "AMogjmLf2QohTcGST7niV75ekZfj44SKme",
-				InitPos:    40000,
-			},
-			{
-				Index:      5,
-				PeerPubkey: "021844159f97d81da71da52f84e8451ee573c83b296ff2446387b292e44fba5c98",
-				Address:    "AZzQTkZvjy7ih9gjvwU8KYiZZyNoy6jE9p",
-				InitPos:    30000,
-			},
-			{
-				Index:      6,
-				PeerPubkey: "020cc76feb375d6ea8ec9ff653bab18b6bbc815610cecc76e702b43d356f885835",
-				Address:    "AKEqQKmxCsjWJz8LPGryXzb6nN5fkK1WDY",
-				InitPos:    20000,
-			},
-			{
-				Index:      7,
-				PeerPubkey: "03aa4d52b200fd91ca12deff46505c4608a0f66d28d9ae68a342c8a8c1266de0f9",
-				Address:    "AQNpGWz4oHHFBejtBbakeR43DHfen7cm8L",
-				InitPos:    10000,
-			},
-		},
-	},
-	DBFT: &DBFTConfig{},
-	SOLO: &SOLOConfig{},
-}
-
 var MainNetConfig = &GenesisConfig{
 	SeedList: []string{
-		"seed1.ont.io:20338",
-		"seed2.ont.io:20338",
-		"seed3.ont.io:20338",
-		"seed4.ont.io:20338",
-		"seed5.ont.io:20338"},
+		"172.17.0.2:20338",
+		"172.17.0.3:20338",
+		"172.17.0.4:20338",
+		"172.17.0.5:20338",
+		"172.17.0.6:20338",
+		"172.17.0.7:20338",
+		"172.17.0.8:20338"},
 	ConsensusType: CONSENSUS_TYPE_VBFT,
 	VBFT: &VBFTConfig{
-		N:                    7,
+		N:                    5,
 		C:                    2,
 		K:                    7,
 		L:                    112,
 		BlockMsgDelay:        10000,
 		HashMsgDelay:         10000,
 		PeerHandshakeTimeout: 10,
-		MaxBlockChangeView:   120000,
+		MaxBlockChangeView:   12,
 		AdminOntID:           "did:ont:AdjfcJgwru2FD8kotCPvLDXYzRjqFjc9Tb",
-		MinInitStake:         100000,
+		MinInitStake:         100,
 		VrfValue:             "1c9810aa9822e511d5804a9c4db9dd08497c31087b0daafa34d768a3253441fa20515e2f30f81741102af0ca3cefc4818fef16adb825fbaa8cad78647f3afb590e",
 		VrfProof:             "c57741f934042cb8d8b087b44b161db56fc3ffd4ffb675d36cd09f83935be853d8729f3f5298d12d6fd28d45dde515a4b9d7f67682d182ba5118abf451ff1988",
 		Peers: []*VBFTPeerStakeInfo{
@@ -211,13 +144,13 @@ var MainNetConfig = &GenesisConfig{
 			},
 			{
 				Index:      6,
-				PeerPubkey: "020cc76feb375d6ea8ec9ff653bab18b6bbc815610cecc76e702b43d356f885835",
-				Address:    "AKEqQKmxCsjWJz8LPGryXzb6nN5fkK1WDY",
+				PeerPubkey: "039cb7ac9da9bb7b138cb11a5efff60dfe2b2ca0c06c7c3400ed81be60e2744dd7",
+				Address:    "AJ9jnCbuwkzCmCSbXg9K6x3fEHxbcGo1vb",
 			},
 			{
 				Index:      7,
-				PeerPubkey: "03aa4d52b200fd91ca12deff46505c4608a0f66d28d9ae68a342c8a8c1266de0f9",
-				Address:    "AQNpGWz4oHHFBejtBbakeR43DHfen7cm8L",
+				PeerPubkey: "028d76abef927e967c7ee56a02179c5f0ecb65cc778c4fa3f81f78786f42375f1a",
+				Address:    "AHofDmNxw6QEbm7HCyQmvXq1NQKoRnpv5L",
 			},
 		},
 	},
@@ -225,7 +158,7 @@ var MainNetConfig = &GenesisConfig{
 	SOLO: &SOLOConfig{},
 }
 
-var DefConfig = NewOntologyConfig()
+var DefConfig = NewCvbftConfig()
 
 type GenesisConfig struct {
 	SeedList      []string
@@ -512,7 +445,7 @@ type WebSocketConfig struct {
 	HttpKeyPath  string
 }
 
-type OntologyConfig struct {
+type CvbftConfig struct {
 	Genesis   *GenesisConfig
 	Common    *CommonConfig
 	Consensus *ConsensusConfig
@@ -522,8 +455,8 @@ type OntologyConfig struct {
 	Ws        *WebSocketConfig
 }
 
-func NewOntologyConfig() *OntologyConfig {
-	return &OntologyConfig{
+func NewCvbftConfig() *CvbftConfig {
+	return &CvbftConfig{
 		Genesis: MainNetConfig,
 		Common: &CommonConfig{
 			LogLevel:       DEFAULT_LOG_LEVEL,
@@ -571,7 +504,7 @@ func NewOntologyConfig() *OntologyConfig {
 	}
 }
 
-func (this *OntologyConfig) GetBookkeepers() ([]keypair.PublicKey, error) {
+func (this *CvbftConfig) GetBookkeepers() ([]keypair.PublicKey, error) {
 	var bookKeepers []string
 	switch this.Genesis.ConsensusType {
 	case CONSENSUS_TYPE_VBFT:
@@ -599,7 +532,7 @@ func (this *OntologyConfig) GetBookkeepers() ([]keypair.PublicKey, error) {
 	return pubKeys, nil
 }
 
-func (this *OntologyConfig) GetDefaultNetworkId() (uint32, error) {
+func (this *CvbftConfig) GetDefaultNetworkId() (uint32, error) {
 	defaultNetworkId, err := this.getDefNetworkIDFromGenesisConfig(this.Genesis)
 	if err != nil {
 		return 0, err
@@ -608,29 +541,22 @@ func (this *OntologyConfig) GetDefaultNetworkId() (uint32, error) {
 	if err != nil {
 		return 0, err
 	}
-	polaridId, err := this.getDefNetworkIDFromGenesisConfig(PolarisConfig)
 	if err != nil {
 		return 0, err
 	}
 	switch defaultNetworkId {
 	case mainNetId:
 		return NETWORK_ID_MAIN_NET, nil
-	case polaridId:
-		return NETWORK_ID_POLARIS_NET, nil
 	}
 	return defaultNetworkId, nil
 }
 
-func (this *OntologyConfig) getDefNetworkIDFromGenesisConfig(genCfg *GenesisConfig) (uint32, error) {
+func (this *CvbftConfig) getDefNetworkIDFromGenesisConfig(genCfg *GenesisConfig) (uint32, error) {
 	var configData []byte
 	var err error
 	switch this.Genesis.ConsensusType {
 	case CONSENSUS_TYPE_VBFT:
 		configData, err = json.Marshal(genCfg.VBFT)
-	case CONSENSUS_TYPE_DBFT:
-		configData, err = json.Marshal(genCfg.DBFT)
-	case CONSENSUS_TYPE_SOLO:
-		return NETWORK_ID_SOLO_NET, nil
 	default:
 		return 0, fmt.Errorf("unknown consensus type:%s", this.Genesis.ConsensusType)
 	}

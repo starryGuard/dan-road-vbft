@@ -17,6 +17,7 @@ import (
 	bactor "dan-road-vbft/http/base/actor"
 	hserver "dan-road-vbft/http/base/actor"
 	"dan-road-vbft/http/jsonrpc"
+	"dan-road-vbft/http/restful"
 	"dan-road-vbft/p2pserver"
 	netreqactor "dan-road-vbft/p2pserver/actor/req"
 	p2pactor "dan-road-vbft/p2pserver/actor/server"
@@ -141,12 +142,13 @@ func startApp(ctx *cli.Context) {
 		log.Errorf("initRpc error:%s", err)
 		return
 	}
+	initRestful(ctx)
 	waitToExit()
 }
 
-func initConfig(ctx *cli.Context) (*config.OntologyConfig, error) {
+func initConfig(ctx *cli.Context) (*config.CvbftConfig, error) {
 	//init ontology config from cli
-	cfg, err := cmd.SetOntologyConfig(ctx)
+	cfg, err := cmd.SetCvbftConfig(ctx)
 	if err != nil {
 		return nil, err
 	}
@@ -284,6 +286,15 @@ func initRpc(ctx *cli.Context) error {
 	}
 	log.Infof("Rpc init success")
 	return nil
+}
+
+func initRestful(ctx *cli.Context) {
+	if !config.DefConfig.Restful.EnableHttpRestful {
+		return
+	}
+	go restful.StartServer()
+
+	log.Infof("Restful init success")
 }
 
 func waitToExit() {
