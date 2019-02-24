@@ -228,6 +228,8 @@ func calcParticipantPeers(cfg *BlockParticipantConfig, chain *vconfig.ChainConfi
 			peerMap[peerId] = true
 			cnt++
 			if cnt >= chain.N {
+				fmt.Println("calcParticipantPeers : peers", peers)
+				fmt.Println("calcParticipantPeers : PosTable", chain.PosTable)
 				return peers
 			}
 		}

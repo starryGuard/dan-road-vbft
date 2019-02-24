@@ -53,9 +53,9 @@ var ImportCommand = cli.Command{
 func importBlocks(ctx *cli.Context) error {
 	log.InitLog(log.InfoLog)
 
-	_, err := SetOntologyConfig(ctx)
+	_, err := SetCvbftConfig(ctx)
 	if err != nil {
-		PrintErrorMsg("SetOntologyConfig error:%s", err)
+		PrintErrorMsg("SetCvbftConfig error:%s", err)
 		cli.ShowSubcommandHelp(ctx)
 		return nil
 	}

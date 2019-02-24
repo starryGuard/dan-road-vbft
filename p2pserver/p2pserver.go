@@ -268,31 +268,26 @@ func (this *P2PServer) WaitForPeersStart() {
 func (this *P2PServer) connectSeeds() {
 	seedNodes := make([]string, 0)
 	pList := make([]*peer.Peer, 0)
-	//for _, n := range config.DefConfig.Genesis.SeedList {
-	//	ip, err := common.ParseIPAddr(n)
-	//	fmt.Println("-----------ip", ip)
-	//	if err != nil {
-	//		log.Warnf("[p2p]seed peer %s address format is wrong", n)
-	//		continue
-	//	}
-	//	ns, err := net.LookupHost(ip)
-	//	if err != nil {
-	//		log.Warnf("[p2p]resolve err: %s", err.Error())
-	//		continue
-	//	}
-	//	port, err := common.ParseIPPort(n)
-	//	if err != nil {
-	//		log.Warnf("[p2p]seed peer %s address format is wrong", n)
-	//		continue
-	//	}
-	//	fmt.Println("-----------ns[0]+port", ns[0]+port)
-	//	seedNodes = append(seedNodes, ns[0]+port)
-	//}
-
-	seedNodes = append(seedNodes, "172.17.0.2:20338")
-	seedNodes = append(seedNodes, "172.17.0.3:20338")
-	seedNodes = append(seedNodes, "172.17.0.4:20338")
-	seedNodes = append(seedNodes, "172.17.0.5:20338")
+	for _, n := range config.DefConfig.Genesis.SeedList {
+		//ip, err := common.ParseIPAddr(n)
+		//fmt.Println("-----------ip", ip)
+		//if err != nil {
+		//	log.Warnf("[p2p]seed peer %s address format is wrong", n)
+		//	continue
+		//}
+		//ns, err := net.LookupHost(ip)
+		//if err != nil {
+		//	log.Warnf("[p2p]resolve err: %s", err.Error())
+		//	continue
+		//}
+		//port, err := common.ParseIPPort(n)
+		//if err != nil {
+		//	log.Warnf("[p2p]seed peer %s address format is wrong", n)
+		//	continue
+		//}
+		//fmt.Println("-----------ns[0]+port", ns[0]+port)
+		seedNodes = append(seedNodes, n)
+	}
 
 	for _, nodeAddr := range seedNodes {
 		var ip net.IP

@@ -28,7 +28,7 @@ import (
 	"github.com/urfave/cli"
 )
 
-func SetOntologyConfig(ctx *cli.Context) (*config.OntologyConfig, error) {
+func SetCvbftConfig(ctx *cli.Context) (*config.CvbftConfig, error) {
 	cfg := config.DefConfig
 	err := setGenesis(ctx, cfg)
 	if err != nil {
@@ -64,13 +64,11 @@ func SetOntologyConfig(ctx *cli.Context) (*config.OntologyConfig, error) {
 	return cfg, nil
 }
 
-func setGenesis(ctx *cli.Context, cfg *config.OntologyConfig) error {
+func setGenesis(ctx *cli.Context, cfg *config.CvbftConfig) error {
 	netWorkId := ctx.Int(utils.GetFlagName(utils.NetworkIdFlag))
 	switch netWorkId {
 	case config.NETWORK_ID_MAIN_NET:
 		cfg.Genesis = config.MainNetConfig
-	case config.NETWORK_ID_POLARIS_NET:
-		cfg.Genesis = config.PolarisConfig
 	}
 
 	if ctx.Bool(utils.GetFlagName(utils.EnableTestModeFlag)) {

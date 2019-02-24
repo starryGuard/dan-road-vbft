@@ -24,6 +24,7 @@ docker/payload: docker/build/bin/cvbft docker/Dockerfile
 	@cp docker/Dockerfile $@
 	@cp docker/build/bin/cvbft $@
 	@cp wallet.dat $@
+	@cp run.sh $@
 	@touch $@
 
 docker/build/bin/%: Makefile
