@@ -104,6 +104,7 @@ type Server struct {
 	//消息接受器，只有在newConsensusPayload时才会放入消息，
 	msgRecvC map[uint32]chan *p2pMsgPayload
 	//共识消息接受器
+	//TODO 什么时候向里面放入消息 bftActionC -> msgC
 	msgC       chan ConsensusMsg
 	bftActionC chan *BftAction
 	msgSendC   chan *SendMsgEvent
@@ -730,6 +731,7 @@ func (self *Server) startNewProposal(blkNum uint32) error {
 }
 
 // verify consensus messsage, then send msg to processMsgEvent
+// TODO 验证共识消息，将消息发送到消息处理处
 func (self *Server) onConsensusMsg(peerIdx uint32, msg ConsensusMsg, msgHash common.Uint256) {
 
 	if self.msgPool.HasMsg(msg, msgHash) {
@@ -1135,6 +1137,7 @@ func (self *Server) processConsensusMsg(msg ConsensusMsg) {
 	}
 }
 
+// TODO 消息处理器
 func (self *Server) processMsgEvent() error {
 	select {
 	case msg := <-self.msgC:
@@ -1322,6 +1325,7 @@ func (self *Server) processMsgEvent() error {
 	return nil
 }
 
+// TODO 事件循环
 func (self *Server) actionLoop() {
 	self.quitWg.Add(1)
 	defer self.quitWg.Done()
@@ -1763,6 +1767,7 @@ func (self *Server) processTimerEvent(evt *TimerEvent) error {
 			txpool := self.poolActor.GetTxnPool(true, self.validHeight(evt.blockNum))
 			if len(txpool) != 0 {
 				self.timer.CancelTxBlockTimeout(evt.blockNum)
+				//开始新的提议
 				self.startNewProposal(evt.blockNum)
 			} else {
 				//reset timer, continue waiting txs from txnpool
@@ -2010,6 +2015,7 @@ func (self *Server) sealBlock(block *Block, empty bool) error {
 	return nil
 }
 
+// TODO 消息发送器，泛洪传播
 func (self *Server) msgSendLoop() {
 	self.quitWg.Add(1)
 	defer self.quitWg.Done()

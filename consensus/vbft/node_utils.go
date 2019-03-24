@@ -191,16 +191,19 @@ func (self *Server) buildParticipantConfig(blkNum uint32, block *Block, chainCfg
 	}
 
 	s := 0
+	//根据VRF从共识网络中选择备选提案节点，各个备选节点将独立提出备选区块；
 	cfg.Proposers = calcParticipantPeers(cfg, chainCfg, s, s+vconfig.MAX_PROPOSER_COUNT)
 	if uint32(len(cfg.Proposers)) < chainCfg.C {
 		return nil, fmt.Errorf("cfg Proposers length less than chainCfg.C:%d,%d", uint32(len(cfg.Proposers)), chainCfg.C)
 	}
 	s += vconfig.MAX_PROPOSER_COUNT
+	//根据VRF从共识网络中选择多个验证节点，每个验证节点将从网络中收集备选的区块，进行验证，然后对最高优先级的备选区块进行投票；
 	cfg.Endorsers = calcParticipantPeers(cfg, chainCfg, s, s+vconfig.MAX_ENDORSER_COUNT)
 	if uint32(len(cfg.Endorsers)) < 2*chainCfg.C {
 		return nil, fmt.Errorf("cfg.Endorsers length less than double chainCfg.C:%d,%d", uint32(len(cfg.Endorsers)), chainCfg.C)
 	}
 	s += vconfig.MAX_ENDORSER_COUNT
+	//根据VRF从共识网络中选择多个确认节点，对上述验证节点的投票结果进行统计验证，并确定出最终的共识结果。
 	cfg.Committers = calcParticipantPeers(cfg, chainCfg, s, s+vconfig.MAX_COMMITTER_COUNT)
 	if uint32(len(cfg.Committers)) < 2*chainCfg.C {
 		return nil, fmt.Errorf("cfg.Committers length less than double chainCfg.C:%d,%d", uint32(len(cfg.Committers)), chainCfg.C)

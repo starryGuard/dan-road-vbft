@@ -191,6 +191,7 @@ func (self *Server) constructBlock(blkNum uint32, prevBlkHash common.Uint256, tx
 	return blk, nil
 }
 
+// TODO 构建提案消息，生成vrf值
 func (self *Server) constructProposalMsg(blkNum uint32, sysTxs, userTxs []*types.Transaction, chainconfig *vconfig.ChainConfig) (*blockProposalMsg, error) {
 
 	prevBlk, prevBlkHash := self.blockPool.getSealedBlock(blkNum - 1)
