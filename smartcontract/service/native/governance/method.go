@@ -122,6 +122,9 @@ func registerCandidate(native *native.NativeService, flag string) error {
 }
 
 func authorizeForPeer(native *native.NativeService, flag string) error {
+
+	fmt.Println("-------------------authorizeForPeer-------------------")
+
 	params := &AuthorizeForPeerParam{
 		PeerPubkeyList: make([]string, 0),
 		PosList:        make([]uint32, 0),

@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="df359d72-2e93-4eb0-b59b-53804e84f485" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consensus/vbft/msg_builder.go" beforeDir="false" afterPath="$PROJECT_DIR$/consensus/vbft/msg_builder.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consensus/vbft/node_utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/consensus/vbft/node_utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consensus/vbft/config/genesis.go" beforeDir="false" afterPath="$PROJECT_DIR$/consensus/vbft/config/genesis.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consensus/vbft/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/consensus/vbft/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consensus/vbft/state_mgmt.go" beforeDir="false" afterPath="$PROJECT_DIR$/consensus/vbft/state_mgmt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consensus/vbft/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/consensus/vbft/utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/store/leveldbstore/leveldb_store_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/core/store/leveldbstore/leveldb_store_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcontract/service/native/governance/governance.go" beforeDir="false" afterPath="$PROJECT_DIR$/smartcontract/service/native/governance/governance.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcontract/service/native/governance/method.go" beforeDir="false" afterPath="$PROJECT_DIR$/smartcontract/service/native/governance/method.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,46 +55,47 @@
     <session id="2017778773">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.6" value="3" />
-          <entry key="project.open.time.7" value="3" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.7" value="5" />
+          <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="CURRENT" value="2" />
-          <entry key="Dockerfile" value="13" />
+          <entry key="Dockerfile" value="15" />
           <entry key="LOG" value="1" />
           <entry key="MANIFEST-000106" value="1" />
-          <entry key="Makefile" value="6" />
+          <entry key="Makefile" value="8" />
           <entry key="dan-road-vbft" value="7" />
           <entry key="dat" value="23" />
           <entry key="db" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="go" value="593" />
+          <entry key="go" value="680" />
           <entry key="ldb" value="1" />
           <entry key="log" value="1" />
           <entry key="md" value="2" />
           <entry key="recent" value="2" />
           <entry key="s" value="1" />
-          <entry key="sh" value="5" />
+          <entry key="sh" value="7" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="3" />
-          <entry key="Dockerfile" value="9" />
-          <entry key="Go" value="593" />
-          <entry key="PLAIN_TEXT" value="48" />
+          <entry key="Bash" value="5" />
+          <entry key="Dockerfile" value="11" />
+          <entry key="Go" value="680" />
+          <entry key="PLAIN_TEXT" value="50" />
           <entry key="SourceMap" value="7" />
           <entry key="XML" value="2" />
           <entry key="x86 Plan9 Assembly" value="1" />
@@ -102,17 +108,17 @@
           <entry key="dan-road-vbft" value="1" />
           <entry key="dat" value="50" />
           <entry key="gitignore" value="8" />
-          <entry key="go" value="4572" />
+          <entry key="go" value="4978" />
           <entry key="sh" value="107" />
-          <entry key="txt" value="33" />
+          <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="106" />
           <entry key="Dockerfile" value="118" />
-          <entry key="Go" value="4572" />
-          <entry key="PLAIN_TEXT" value="376" />
+          <entry key="Go" value="4978" />
+          <entry key="PLAIN_TEXT" value="379" />
           <entry key="SourceMap" value="1" />
         </counts>
       </usages-collector>
@@ -121,10 +127,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consensus/vbft/node_utils.go">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/service.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="393" column="14" selection-start-line="393" selection-start-column="14" selection-end-line="393" selection-end-column="14" />
+            <state relative-caret-position="39881">
+              <caret line="2126" column="42" selection-start-line="2126" selection-start-column="28" selection-end-line="2126" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -132,53 +138,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consensus/vbft/utils.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="1919">
+              <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/types/header.go">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/types.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="494">
+              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consensus/vbft/peer_pool.go">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_pool.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="224" column="22" selection-start-line="224" selection-start-column="22" selection-end-line="224" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consensus/vbft/state_mgmt.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consensus/vbft/config/config.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/consensus/vbft/service.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="1150" lean-forward="true" selection-start-line="1150" selection-end-line="1150" />
+            <state relative-caret-position="1330">
+              <caret line="76" column="21" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -186,26 +165,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_builder.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="193" column="146" selection-start-line="193" selection-start-column="130" selection-end-line="193" selection-end-column="146" />
+            <state relative-caret-position="4332">
+              <caret line="240" column="26" selection-start-line="240" selection-start-column="26" selection-end-line="240" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consensus/vbft/block_pool.go">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_types.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="647" column="23" selection-start-line="647" selection-start-column="23" selection-end-line="647" selection-end-column="23" />
+            <state relative-caret-position="532">
+              <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consensus/vbft/event_timer.go">
+        <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/governance.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+            <state relative-caret-position="249">
+              <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="139" column="22" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/config/config.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="122" column="65" selection-start-line="122" selection-start-column="65" selection-end-line="122" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/utils.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7752">
+              <caret line="424" column="56" selection-start-line="424" selection-start-column="56" selection-end-line="424" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -221,36 +227,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Chain</find>
-      <find>fmt.println</find>
-      <find>waitp</find>
-      <find>msgSendC</find>
-      <find>SerializeVbftMsg</find>
-      <find>msgRecvC</find>
-      <find>172</find>
-      <find>23.99.134.190</find>
-      <find>40.113.239.95</find>
-      <find>seed</find>
-      <find>40.113.237.243</find>
-      <find>----------start transfer</find>
-      <find>172.</find>
-      <find>evt.Msg.Type</find>
-      <find>receiveFromPeer</find>
-      <find>DeserializeVbftMsg</find>
-      <find>getsockopt</find>
-      <find>sendrawtransaction&quot;</find>
-      <find>StartRPCServer</find>
-      <find>balance:</find>
-      <find>//查询该地址余额</find>
-      <find>getbalance</find>
-      <find>getba</find>
-      <find>no balance enough to cover gas</find>
-      <find>balance insufficient</find>
-      <find>AHofDmNxw6QEbm7HCyQmvXq1NQKoRnpv5L</find>
-      <find>028d76abef927e967c7ee56a02179c5f0ecb65cc778c4fa3f81f78786f42375f1a</find>
+      <find>addInitPos</find>
+      <find>REDUCE_INIT_POS</find>
+      <find>reduceInitPos</find>
+      <find>native.invoke</find>
+      <find>native.nativecall</find>
+      <find>ver) onConsensusMsg</find>
+      <find>startNewProposal</find>
+      <find>GetPeersConfig</find>
+      <find>chain/</find>
+      <find>pso</find>
+      <find>172.17.0.4</find>
+      <find>checkUpdateChainConfig</find>
+      <find>no proposal</find>
+      <find>no proposal found</find>
+      <find>peer update</find>
+      <find>据VRF从共识网络</find>
+      <find>posTable</find>
       <find>startNewRound</find>
-      <find>MakeProposal</find>
-      <find>blockProposalMsg</find>
+      <find>received con</find>
+      <find>calcParticipantPeers</find>
+      <find>GetStorageItem</find>
+      <find>GovernanceView</find>
+      <find>add</find>
+      <find>BatchPut</find>
+      <find>save</find>
+      <find>getChainConfig fai</find>
+      <find>&quot;preConfig&quot;</find>
+      <find>preConfig</find>
+      <find>PRE_CONFIG</find>
+      <find>172</find>
     </findStrings>
     <replaceStrings>
       <replace>awesomeProject/ontology-crypto</replace>
@@ -272,12 +278,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vbft/msg_builder.go" />
-        <option value="$PROJECT_DIR$/core/genesis/genesis.go" />
-        <option value="$PROJECT_DIR$/crypto/keypair/encrypt.go" />
-        <option value="$PROJECT_DIR$/vm/wasmvm/wasm/operators/conv_test.go" />
-        <option value="$PROJECT_DIR$/actor/actor.go" />
-        <option value="$PROJECT_DIR$/actor/message.go" />
         <option value="$PROJECT_DIR$/http/base/common.go" />
         <option value="$PROJECT_DIR$/http/base/rpc/rpc.go" />
         <option value="$PROJECT_DIR$/http/base/actor/net_server.go" />
@@ -319,10 +319,16 @@
         <option value="$PROJECT_DIR$/http/base/common/common.go" />
         <option value="$PROJECT_DIR$/cmd/asset_cmd.go" />
         <option value="$PROJECT_DIR$/smartcontract/service/native/ont/utils.go" />
-        <option value="$PROJECT_DIR$/common/config/config.go" />
         <option value="$PROJECT_DIR$/consensus/vbft/msg_builder.go" />
-        <option value="$PROJECT_DIR$/consensus/vbft/service.go" />
         <option value="$PROJECT_DIR$/consensus/vbft/node_utils.go" />
+        <option value="$PROJECT_DIR$/smartcontract/service/native/governance/governance.go" />
+        <option value="$PROJECT_DIR$/smartcontract/service/native/governance/method.go" />
+        <option value="$PROJECT_DIR$/consensus/vbft/state_mgmt.go" />
+        <option value="$PROJECT_DIR$/consensus/vbft/service.go" />
+        <option value="$PROJECT_DIR$/consensus/vbft/config/genesis.go" />
+        <option value="$PROJECT_DIR$/core/store/leveldbstore/leveldb_store_test.go" />
+        <option value="$PROJECT_DIR$/consensus/vbft/utils.go" />
+        <option value="$PROJECT_DIR$/common/config/config.go" />
       </list>
     </option>
   </component>
@@ -342,6 +348,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -351,117 +358,36 @@
             </path>
             <path>
               <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
+              <item name="chain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.11.1" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.11.1" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.11.1" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="ledgerstore" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.11.1" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="howeyc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="howeyc" type="462c0819:PsiDirectoryNode" />
-              <item name="gopass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="ontio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="ontio" type="462c0819:PsiDirectoryNode" />
-              <item name="ontology-eventbus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="ontio" type="462c0819:PsiDirectoryNode" />
-              <item name="ontology-eventbus" type="462c0819:PsiDirectoryNode" />
-              <item name="zmqremote" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="urfave" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;dan-road-vbft&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="urfave" type="462c0819:PsiDirectoryNode" />
-              <item name="cli" type="462c0819:PsiDirectoryNode" />
+              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -504,7 +430,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (1)">
+  <component name="RunManager" selected="Go Test.TestLevelDB in dan-road-vbft/core/store/leveldbstore">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="dan-road-vbft" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -533,15 +459,15 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="TestGetChainedBlockNum in awesomeProject/vbft" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLevelDB in dan-road-vbft/core/store/leveldbstore" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dan-road-vbft" />
-      <working_directory value="$PROJECT_DIR$/vbft" />
+      <working_directory value="$PROJECT_DIR$/core/store/leveldbstore" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="awesomeProject/vbft" />
+      <package value="dan-road-vbft/core/store/leveldbstore" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestGetChainedBlockNum$" />
+      <pattern value="^TestLevelDB$" />
       <method v="2" />
     </configuration>
     <configuration name="TestVrf in dan-road-vbft/crypto/vrf" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -584,25 +510,31 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestGetChainedBlockNum in awesomeProject/vbft" />
       <item itemvalue="Go Build.go build main.go" />
       <item itemvalue="Docker.payload/Dockerfile" />
       <item itemvalue="Go Build.go build main.go (1)" />
       <item itemvalue="Go Test.TestVrf in dan-road-vbft/crypto/vrf" />
+      <item itemvalue="Go Test.TestLevelDB in dan-road-vbft/core/store/leveldbstore" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestLevelDB in dan-road-vbft/core/store/leveldbstore" />
         <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Docker.payload/Dockerfile" />
         <item itemvalue="Go Test.TestVrf in dan-road-vbft/crypto/vrf" />
         <item itemvalue="Docker.payload/Dockerfile" />
-        <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
     <history-entry file="TestVrf_in_dan-road-vbft_crypto_vrf - 2018.12.01 at 16h 11m 35s.xml">
       <configuration name="TestVrf in dan-road-vbft/crypto/vrf" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestLevelDB_in_dan-road-vbft_core_store_leveldbstore - 2019.05.26 at 16h 40m 41s.xml">
+      <configuration name="TestLevelDB in dan-road-vbft/core/store/leveldbstore" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestLevelDB_in_dan-road-vbft_core_store_leveldbstore - 2019.05.26 at 16h 41m 21s.xml">
+      <configuration name="TestLevelDB in dan-road-vbft/core/store/leveldbstore" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -615,22 +547,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-308" y="-1080" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.048455805" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16452074" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23366337" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23253012" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32970297" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.4985694" visible="true" weight="0.22475247" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" weight="0.27898088" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4985694" weight="0.27349398" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" visible="true" weight="0.26746988" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="12" weight="0.32891566" />
@@ -677,198 +608,10 @@
     <MESSAGE value="Test vrf" />
     <MESSAGE value="docker" />
     <MESSAGE value="pos" />
-    <option name="LAST_COMMIT_MESSAGE" value="pos" />
+    <MESSAGE value="vrf" />
+    <option name="LAST_COMMIT_MESSAGE" value="vrf" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p2pserver/message/types/consensus_payload.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p2pserver/p2pserver.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4351">
-          <caret line="255" column="41" selection-start-line="255" selection-start-column="41" selection-end-line="255" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.11.1/libexec/src/encoding/json/stream.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="253" column="5" selection-start-line="253" selection-start-column="5" selection-end-line="253" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.11.1/libexec/src/encoding/json/decode.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/utils/utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/utils/rpc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/websocket/websocket/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="184" column="57" selection-start-line="184" selection-start-column="57" selection-end-line="184" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/base/rpc/rpc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/utils/params.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/ledger/ledger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="145" column="43" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/store/ledgerstore/ledger_store.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="853" column="28" lean-forward="true" selection-start-line="853" selection-start-column="28" selection-end-line="853" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/jsonrpc/rpc_server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/base/rpc/interfaces.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="296" column="46" selection-start-line="296" selection-start-column="34" selection-end-line="296" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/base/actor/ledger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/base/actor/txnpool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txnpool/proc/txnpool_server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="534" column="24" selection-start-line="534" selection-start-column="24" selection-end-line="534" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txnpool/proc/txnpool_actor.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="46" column="44" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/base/rest/interfaces.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="421" column="36" selection-start-line="421" selection-start-column="26" selection-end-line="421" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/bigint.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/base/common/common.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="336" column="39" selection-start-line="336" selection-start-column="39" selection-end-line="336" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/utils/ont.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/asset_cmd.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="178" column="5" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcontract/storage/cachedb.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1027">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/native_service.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/utils/store.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/ont/utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -883,52 +626,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wallet.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/config/genesis.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2368">
-          <caret line="141" column="32" selection-start-line="141" selection-start-column="32" selection-end-line="141" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/types.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_types.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -953,38 +654,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="118" column="21" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/actor/actor.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/state_mgmt.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/peer_pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="224" column="22" selection-start-line="224" selection-start-column="22" selection-end-line="224" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/block_pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="647" column="23" selection-start-line="647" selection-start-column="23" selection-end-line="647" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -995,45 +668,304 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/utils.go">
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/peer_pool.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="4123">
+          <caret line="224" column="22" selection-start-line="224" selection-start-column="22" selection-end-line="224" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/config/config.go">
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="57">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/config/genesis_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/block_pool.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8797">
+          <caret line="473" column="23" selection-start-line="473" selection-start-column="23" selection-end-line="473" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consensus/vbft/event_timer.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        <state relative-caret-position="378">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/states/storage_key.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/state_mgmt.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="172" column="17" lean-forward="true" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/genesis/genesis.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/param.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="525" column="13" selection-start-line="525" selection-start-column="13" selection-end-line="525" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/states.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/config/genesis.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/method.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="537" column="5" selection-start-line="537" selection-start-column="5" selection-end-line="537" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consensus/vbft/node_utils.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="393" column="14" selection-start-line="393" selection-start-column="14" selection-end-line="393" selection-end-column="14" />
+        <state relative-caret-position="54">
+          <caret line="216" column="19" selection-start-line="216" selection-start-column="19" selection-end-line="216" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_builder.go">
+    <entry file="file://$PROJECT_DIR$/common/address.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="193" column="146" selection-start-line="193" selection-start-column="130" selection-end-line="193" selection-end-column="146" />
+        <state relative-caret-position="114">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/utils/params.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd/import_cmd.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.11.1/libexec/src/os/path_unix.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd/utils/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="115" column="38" lean-forward="true" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/store/ledgerstore/ledger_store_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1323">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/store/ledgerstore/state_store_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/store/leveldbstore/leveldb_store_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validator/db/store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="791">
+          <caret line="88" column="23" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/store/common/store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/store/ledgerstore/block_store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="414" column="22" selection-start-line="414" selection-start-column="22" selection-end-line="414" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/store/leveldbstore/leveldb_store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="66" column="27" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/native_service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/store/ledgerstore/state_store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="121" column="23" selection-start-line="121" selection-start-column="15" selection-end-line="121" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/ledger/ledger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="145" column="43" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/store/ledgerstore/ledger_store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="815" column="28" selection-start-line="815" selection-start-column="28" selection-end-line="815" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consensus/vbft/service.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="1150" lean-forward="true" selection-start-line="1150" selection-end-line="1150" />
+        <state relative-caret-position="39881">
+          <caret line="2126" column="42" selection-start-line="2126" selection-start-column="28" selection-end-line="2126" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1919">
+          <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/types.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_pool.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="76" column="21" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_builder.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4332">
+          <caret line="240" column="26" selection-start-line="240" selection-start-column="26" selection-end-line="240" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_types.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7752">
+          <caret line="424" column="56" selection-start-line="424" selection-start-column="56" selection-end-line="424" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/governance.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="139" column="22" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="122" column="65" selection-start-line="122" selection-start-column="65" selection-end-line="122" selection-end-column="65" />
         </state>
       </provider>
     </entry>

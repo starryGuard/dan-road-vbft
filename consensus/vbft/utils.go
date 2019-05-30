@@ -173,6 +173,9 @@ func GetVbftConfigInfo() (*config.VBFTConfig, error) {
 }
 
 func GetPeersConfig() ([]*config.VBFTPeerStakeInfo, error) {
+
+	fmt.Println("------------------GetPeersConfig------------------")
+
 	goveranceview, err := GetGovernanceView()
 	if err != nil {
 		return nil, err
@@ -196,9 +199,11 @@ func GetPeersConfig() ([]*config.VBFTPeerStakeInfo, error) {
 	if err != nil {
 		return nil, err
 	}
+	//获取节点的股份
 	var peerstakes []*config.VBFTPeerStakeInfo
 	for _, id := range peerMap.PeerPoolMap {
 		if id.Status == gov.CandidateStatus || id.Status == gov.ConsensusStatus {
+			fmt.Println("GetPeersConfig id :{},id.InitPos : {}, id.TotalPos:{}", id.Index, id.InitPos, id.TotalPos)
 			config := &config.VBFTPeerStakeInfo{
 				Index:      uint32(id.Index),
 				PeerPubkey: id.PeerPubkey,

@@ -86,15 +86,13 @@ func GenesisChainConfig(config *config.VBFTConfig, peersinfo []*config.VBFTPeerS
 		}
 		return false
 	})
-	log.Debugf("sorted peers: %v", peers)
+	log.Infof("节点排序: %v", peers)
 	// get stake sum of top-k peers
 	var sum uint64
 	for i := 0; i < int(config.K); i++ {
 		sum += peers[i].InitPos
-		log.Debugf("peer: %d, stack: %d", peers[i].Index, peers[i].InitPos)
+		log.Infof("节点: %d, 信用: %d", peers[i].Index, peers[i].InitPos)
 	}
-
-	log.Debugf("sum of top K stakes: %d", sum)
 
 	// calculate peer ranks
 	scale := config.L/config.K - 1
@@ -111,9 +109,9 @@ func GenesisChainConfig(config *config.VBFTConfig, peersinfo []*config.VBFTPeerS
 		peerRanks = append(peerRanks, s)
 	}
 
-	log.Debugf("peers rank table: %v", peerRanks)
+	log.Infof("节点排名表: %v", peerRanks)
 
-	// calculate pos table
+	//计算POS表
 	chainPeers := make(map[uint32]*PeerConfig, 0)
 	posTable := make([]uint32, 0)
 	for i := 0; i < int(config.K); i++ {
@@ -135,7 +133,7 @@ func GenesisChainConfig(config *config.VBFTConfig, peersinfo []*config.VBFTPeerS
 		j := h % uint64(i)
 		posTable[i], posTable[j] = posTable[j], posTable[i]
 	}
-	log.Debugf("init pos table: %v", posTable)
+	log.Infof("初始化信用表: %v", posTable)
 
 	// generate chain config, and save to ChainConfigFile
 	peerCfgs := make([]*PeerConfig, 0)

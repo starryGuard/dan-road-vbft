@@ -1433,6 +1433,9 @@ func WithdrawFee(native *native.NativeService) ([]byte, error) {
 
 //add init pos of a node
 func AddInitPos(native *native.NativeService) ([]byte, error) {
+
+	fmt.Println("---------------------AddInitPos-----------------------")
+
 	if native.Height < NEW_VERSION_BLOCK {
 		return utils.BYTE_FALSE, fmt.Errorf("block num is not reached for this func")
 	}

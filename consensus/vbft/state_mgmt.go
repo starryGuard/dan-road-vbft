@@ -41,7 +41,7 @@ const (
 	UpdatePeerState                 // notify statemgmt on peer heartbeat
 	SyncReadyTimeout
 	SyncDone
-	LiveTick
+	LiveTick //
 )
 
 type StateEvent struct {
@@ -164,7 +164,7 @@ func (self *StateMgr) onPeerUpdate(peerState *PeerState) error {
 		newPeer = true
 	}
 
-	log.Infof("server %d peer update, current blk %d, state %d, from peer %d, committed %d",
+	log.Infof("服务 %d 节点更新, 当前区块 %d, 状态 %d, 接收自节点 %d, 已提交 %d",
 		self.server.Index, self.server.GetCurrentBlockNo(), self.currentState, peerState.peerIdx, peerState.committedBlockNum)
 
 	// update peer state

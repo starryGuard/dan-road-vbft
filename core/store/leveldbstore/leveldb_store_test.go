@@ -31,6 +31,7 @@ func TestLevelDB(t *testing.T) {
 		return
 	}
 	v, err := testLevelDB.Get([]byte(key))
+	t.Logf("value = %s", v)
 	if err != nil {
 		t.Errorf("Get error:%s", err)
 		return

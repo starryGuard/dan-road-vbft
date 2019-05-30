@@ -203,7 +203,7 @@ func (self *Server) handleBlockPersistCompleted(block *types.Block) {
 		log.Errorf("server %d, persist block %d, vs completed %d",
 			self.Index, block.Header.Height, self.completedBlockNum)
 	}
-	if self.checkNeedUpdateChainConfig(self.completedBlockNum) || self.checkUpdateChainConfig() {
+	if self.checkNeedUpdateChainConfig(self.completedBlockNum) {
 		err := self.updateChainConfig()
 		if err != nil {
 			log.Errorf("updateChainConfig failed:%s", err)
@@ -593,7 +593,7 @@ func (self *Server) run(peerPubKey keypair.PublicKey) error {
 				}
 
 				if msg.Type() < 4 {
-					log.Infof("server %d received consensus msg, blk %d, type: %d from %d",
+					log.Infof("服务 %d 接收到共识消息, 区块 %d, 类型: %d 来自节点 %d",
 						self.Index, msg.GetBlockNum(), msg.Type(), fromPeer)
 				}
 
@@ -1507,6 +1507,7 @@ func (self *Server) actionLoop() {
 									self.Index, blkNum, err)
 							}
 						} else {
+
 							log.Errorf("server %d rebroadcasting failed to endorse(%d), no proposal found(%d)",
 								self.Index, blkNum, len(proposals))
 						}
@@ -2122,7 +2123,7 @@ func (self *Server) makeProposal(blkNum uint32, forEmpty bool) error {
 	//check need upate chainconfig
 	cfg := &vconfig.ChainConfig{}
 	cfg = nil
-	if self.checkNeedUpdateChainConfig(blkNum) || self.checkUpdateChainConfig() {
+	if self.checkNeedUpdateChainConfig(blkNum) {
 		chainconfig, err := getChainConfig(blkNum)
 		if err != nil {
 			return fmt.Errorf("getChainConfig failed:%s", err)
