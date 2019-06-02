@@ -105,7 +105,7 @@ var MainNetConfig = &GenesisConfig{
 	ConsensusType: CONSENSUS_TYPE_VBFT,
 	VBFT: &VBFTConfig{
 		N:                    4,
-		C:                    2,
+		C:                    1,
 		K:                    7,
 		L:                    112,
 		BlockMsgDelay:        10000,
