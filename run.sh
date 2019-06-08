@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-./cvbft
-#./cvbft --rest --enable-consensus
+#./cvbft
+./cvbft --rest --enable-consensus

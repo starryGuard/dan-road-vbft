@@ -30,6 +30,7 @@ import (
 	bcomn "dan-road-vbft/http/base/common"
 	berr "dan-road-vbft/http/base/error"
 	"dan-road-vbft/smartcontract/service/native/utils"
+	"fmt"
 	"strconv"
 )
 
@@ -56,6 +57,7 @@ func GetNetworkId(cmd map[string]interface{}) map[string]interface{} {
 
 //get connection node count
 func GetConnectionCount(cmd map[string]interface{}) map[string]interface{} {
+	fmt.Println("-------------GetConnectionCount-----------")
 	resp := ResponsePack(berr.SUCCESS)
 	count, err := bactor.GetConnectionCnt()
 	if err != nil {
@@ -214,6 +216,9 @@ func GetBlockByHeight(cmd map[string]interface{}) map[string]interface{} {
 
 //get transaction by hash
 func GetTransactionByHash(cmd map[string]interface{}) map[string]interface{} {
+
+	fmt.Println("GetTransactionByHash")
+
 	resp := ResponsePack(berr.SUCCESS)
 
 	str, ok := cmd["Hash"].(string)
@@ -248,23 +253,30 @@ func GetTransactionByHash(cmd map[string]interface{}) map[string]interface{} {
 
 //send raw transaction
 func SendRawTransaction(cmd map[string]interface{}) map[string]interface{} {
+
+	fmt.Println("SendRawTransaction")
 	resp := ResponsePack(berr.SUCCESS)
 
 	str, ok := cmd["Data"].(string)
+	str = "00d15c3ff13cf401000000000000204e00000000000048fffff3807ecd4122f0cd8337e81cb0d97ca1456e00c66b6a1448fffff3807ecd4122f0cd8337e81cb0d97ca145c86a140b19e027076fa977738da605017dec7fb3e0adf5c86a51c86c51c1087472616e736665721400000000000000000000000000000000000000010068164f6e746f6c6f67792e4e61746976652e496e766f6b65000141409c31235f57ea0d6174dd71f89543bf833923b86aebb96b8a7e5780b306249c7dbb169dbf20b2245fdcf7e9f3aecc16535118137ad4062fe663b11fb9d87130882321036dab5f0d678f5e2d4226ebb8f644a6d78b864c199a7bb19369d3a6aba05b8154ac"
+	fmt.Println("SendRawTransaction str:" + str)
 	if !ok {
 		return ResponsePack(berr.INVALID_PARAMS)
 	}
 	bys, err := common.HexToBytes(str)
+	fmt.Println("SendRawTransaction bys")
 	if err != nil {
 		return ResponsePack(berr.INVALID_PARAMS)
 	}
 
 	txn, err := types.TransactionFromRawBytes(bys)
+	fmt.Println("SendRawTransaction txn")
 	if err != nil {
 		return ResponsePack(berr.INVALID_TRANSACTION)
 	}
 	var hash common.Uint256
 	hash = txn.Hash()
+	fmt.Println("SendRawTransaction hash")
 	log.Debugf("SendRawTransaction recv %s", hash.ToHexString())
 	if txn.TxType == types.Invoke || txn.TxType == types.Deploy {
 		if preExec, ok := cmd["PreExec"].(string); ok && preExec == "1" {
