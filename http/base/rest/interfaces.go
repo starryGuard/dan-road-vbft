@@ -267,7 +267,7 @@ func SendRawTransaction(cmd map[string]interface{}) map[string]interface{} {
 	from, err := wallet.GetAccountByAddress("ANRryVJESVNodWvtVcrkLqMimzqGe7jBSZ", []byte("1"))
 	to, err := wallet.GetAccountByAddress("AGna5UaixJTZcUkijCnM8n8hifmjCySjTc", []byte("2"))
 
-	tx, err := sdk.Native.Ont.NewTransferTransaction(0, 10000, from.Address, to.Address, 1)
+	tx, err := sdk.Native.Ont.NewTransferTransaction(500, 30000, from.Address, to.Address, 1)
 	err = sdk.SignToTransaction(tx, from)
 	txbf := new(bytes.Buffer)
 
