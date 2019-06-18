@@ -1,12 +1,17 @@
 package vbft
 
 import (
+	"bufio"
+	"bytes"
+	"fmt"
+	"os"
 	"reflect"
 	"testing"
 
 	"dan-road-vbft/common"
-	vconfig "dan-road-vbft/consensus/vbft/config"
+	"dan-road-vbft/consensus/vbft/config"
 	"dan-road-vbft/core/types"
+	goSdk "github.com/ontio/ontology-go-sdk"
 )
 
 func TestBlock_getProposer(t *testing.T) {
@@ -199,4 +204,40 @@ func TestInitVbftBlock(t *testing.T) {
 		return
 	}
 	t.Log("TestInitVbftBlock succ")
+}
+
+func TestSignTX(t *testing.T) {
+	sdk := goSdk.NewOntologySdk()
+	//sdk.NewRpcClient().SetAddress("http://172.17.0.2:20336")
+	wallet, err := sdk.OpenWallet("/Users/lixiaohan/Library/go/src/dan-road-vbft/wallet.dat")
+	if err != nil {
+		fmt.Println(err)
+	}
+	from, err := wallet.GetAccountByAddress("ANRryVJESVNodWvtVcrkLqMimzqGe7jBSZ", []byte("1"))
+	to, err := wallet.GetAccountByAddress("AGna5UaixJTZcUkijCnM8n8hifmjCySjTc", []byte("2"))
+
+	var f *os.File
+	var err1 error
+	for i := 0; i < 1000; i++ {
+		tx, err := sdk.Native.Ont.NewTransferTransaction(500, 30000, from.Address, to.Address, 1)
+		err = sdk.SignToTransaction(tx, from)
+		txbf := new(bytes.Buffer)
+
+		txt, err := tx.IntoImmutable()
+		txt.Serialize(txbf)
+		if err != nil {
+			fmt.Println(err)
+		}
+		hexCode := common.ToHexString(txbf.Bytes())
+		fmt.Println(hexCode)
+
+		f, err1 = os.OpenFile("/Users/lixiaohan/Desktop/cvbft.txt", os.O_APPEND, 0666)
+		w := bufio.NewWriter(f)
+		fmt.Fprintln(w, hexCode)
+		if err1 != nil {
+			fmt.Println(err1)
+		}
+
+	}
+	f.Close()
 }

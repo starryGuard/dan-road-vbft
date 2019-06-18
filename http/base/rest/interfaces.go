@@ -31,7 +31,6 @@ import (
 	berr "dan-road-vbft/http/base/error"
 	"dan-road-vbft/smartcontract/service/native/utils"
 	"fmt"
-	goSdk "github.com/ontio/ontology-go-sdk"
 	"strconv"
 )
 
@@ -260,22 +259,22 @@ func SendRawTransaction(cmd map[string]interface{}) map[string]interface{} {
 
 	str, ok := cmd["Data"].(string)
 
-	sdk := goSdk.NewOntologySdk()
-	//sdk.NewRpcClient().SetAddress("http://172.17.0.2:20336")
-	wallet, err := sdk.OpenWallet("./wallet.dat")
-
-	from, err := wallet.GetAccountByAddress("ANRryVJESVNodWvtVcrkLqMimzqGe7jBSZ", []byte("1"))
-	to, err := wallet.GetAccountByAddress("AGna5UaixJTZcUkijCnM8n8hifmjCySjTc", []byte("2"))
-
-	tx, err := sdk.Native.Ont.NewTransferTransaction(500, 30000, from.Address, to.Address, 1)
-	err = sdk.SignToTransaction(tx, from)
-	txbf := new(bytes.Buffer)
-
-	txt, err := tx.IntoImmutable()
-	txt.Serialize(txbf)
-	hexCode := common.ToHexString(txbf.Bytes())
-
-	str = hexCode
+	//sdk := goSdk.NewOntologySdk()
+	////sdk.NewRpcClient().SetAddress("http://172.17.0.2:20336")
+	//wallet, err := sdk.OpenWallet("./wallet.dat")
+	//
+	//from, err := wallet.GetAccountByAddress("ANRryVJESVNodWvtVcrkLqMimzqGe7jBSZ", []byte("1"))
+	//to, err := wallet.GetAccountByAddress("AGna5UaixJTZcUkijCnM8n8hifmjCySjTc", []byte("2"))
+	//
+	//tx, err := sdk.Native.Ont.NewTransferTransaction(500, 30000, from.Address, to.Address, 1)
+	//err = sdk.SignToTransaction(tx, from)
+	//txbf := new(bytes.Buffer)
+	//
+	//txt, err := tx.IntoImmutable()
+	//txt.Serialize(txbf)
+	//hexCode := common.ToHexString(txbf.Bytes())
+	//
+	//str = hexCode
 	fmt.Println("SendRawTransaction str:" + str)
 	if !ok {
 		return ResponsePack(berr.INVALID_PARAMS)

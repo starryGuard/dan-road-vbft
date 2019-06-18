@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df359d72-2e93-4eb0-b59b-53804e84f485" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/http/base/rest/interfaces_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consensus/vbft/types_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/consensus/vbft/types_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/base/rest/interfaces.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/base/rest/interfaces.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +50,7 @@
     <session id="2017778773">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="31" />
+          <entry key="project.closed" value="33" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="2" />
@@ -56,11 +59,11 @@
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.6" value="4" />
-          <entry key="project.open.time.7" value="5" />
+          <entry key="project.open.time.6" value="5" />
+          <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.8" value="3" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="31" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -71,10 +74,10 @@
           <entry key="MANIFEST-000106" value="1" />
           <entry key="Makefile" value="8" />
           <entry key="dan-road-vbft" value="7" />
-          <entry key="dat" value="24" />
+          <entry key="dat" value="25" />
           <entry key="db" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="go" value="689" />
+          <entry key="go" value="711" />
           <entry key="ldb" value="1" />
           <entry key="log" value="1" />
           <entry key="md" value="2" />
@@ -88,8 +91,8 @@
         <counts>
           <entry key="Bash" value="6" />
           <entry key="Dockerfile" value="11" />
-          <entry key="Go" value="689" />
-          <entry key="PLAIN_TEXT" value="51" />
+          <entry key="Go" value="711" />
+          <entry key="PLAIN_TEXT" value="52" />
           <entry key="SourceMap" value="7" />
           <entry key="XML" value="2" />
           <entry key="x86 Plan9 Assembly" value="1" />
@@ -102,7 +105,7 @@
           <entry key="dan-road-vbft" value="1" />
           <entry key="dat" value="50" />
           <entry key="gitignore" value="8" />
-          <entry key="go" value="5077" />
+          <entry key="go" value="5213" />
           <entry key="sh" value="107" />
           <entry key="txt" value="36" />
         </counts>
@@ -111,7 +114,7 @@
         <counts>
           <entry key="Bash" value="106" />
           <entry key="Dockerfile" value="118" />
-          <entry key="Go" value="5077" />
+          <entry key="Go" value="5213" />
           <entry key="PLAIN_TEXT" value="379" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -121,19 +124,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/restful/server.go">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/utils.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="1387">
+              <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/restful/restful/server.go">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/service.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2641">
-              <caret line="154" column="70" selection-start-line="154" selection-start-column="70" selection-end-line="154" selection-end-column="70" />
+            <state relative-caret-position="11761">
+              <caret line="646" column="39" selection-start-line="646" selection-start-column="39" selection-end-line="646" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_pool.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="127" column="12" lean-forward="true" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -141,8 +153,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http/base/rest/interfaces.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-917">
-              <caret line="272" selection-start-line="272" selection-end-line="272" />
+            <state relative-caret-position="196">
+              <caret line="263" column="42" lean-forward="true" selection-start-line="263" selection-start-column="42" selection-end-line="263" selection-end-column="42" />
               <folding>
                 <element signature="e#781#1215#0" expanded="true" />
               </folding>
@@ -151,19 +163,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../github.com/ontio/ontology-go-sdk/ont_sdk.go">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/types_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="26">
+              <caret line="208" column="25" selection-start-line="208" selection-start-column="25" selection-end-line="208" selection-end-column="25" />
+              <folding>
+                <element signature="e#14#146#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/types/transaction.go">
+        <entry file="file:///usr/local/Cellar/go/1.11.1/libexec/src/os/file.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="204">
+              <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -178,37 +193,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/base/error/error.go">
+        <entry file="file://$PROJECT_DIR$/../github.com/ontio/ontology-go-sdk/wallet.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state relative-caret-position="192">
+              <caret line="249" selection-start-line="249" selection-end-line="249" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/base/rest/result.go">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/utils_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="152">
+              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.sh">
+        <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_builder.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/config/config.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2413">
-              <caret line="141" column="27" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
+            <state relative-caret-position="3667">
+              <caret line="205" column="41" selection-start-line="205" selection-start-column="31" selection-end-line="205" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -224,7 +230,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>startNewProposal</find>
       <find>GetPeersConfig</find>
       <find>chain/</find>
       <find>pso</find>
@@ -250,10 +255,11 @@
       <find>172</find>
       <find>sendrawtransaction</find>
       <find>getconnectioncount</find>
-      <find>wallet.dat</find>
       <find>dan-road-vbft/crypto/sm2</find>
       <find>dan-road-vbft/crypto</find>
       <find>sendR</find>
+      <find>star</find>
+      <find>wallet.dat</find>
     </findStrings>
     <replaceStrings>
       <replace>awesomeProject/ontology-crypto</replace>
@@ -275,8 +281,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/http/base/rpc/rpc.go" />
-        <option value="$PROJECT_DIR$/http/base/actor/net_server.go" />
         <option value="$PROJECT_DIR$/eventbus/mailbox/unbounded.go" />
         <option value="$PROJECT_DIR$/merkle/file_hash_store.go" />
         <option value="$PROJECT_DIR$/consensus/consensus.go" />
@@ -325,6 +329,8 @@
         <option value="$PROJECT_DIR$/consensus/vbft/state_mgmt.go" />
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/common/config/config.go" />
+        <option value="$PROJECT_DIR$/http/base/rest/interfaces_test.go" />
+        <option value="$PROJECT_DIR$/consensus/vbft/types_test.go" />
         <option value="$PROJECT_DIR$/http/base/rest/interfaces.go" />
       </list>
     </option>
@@ -345,7 +351,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -353,62 +358,11 @@
               <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
               <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
-              <item name="chain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="ledgerstore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="types" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dan-road-vbft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dan-road-vbft" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -425,18 +379,18 @@
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/http/base/rest" />
+      <recent name="$PROJECT_DIR$/docker/payload" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/cmd/utils" />
+      <recent name="$PROJECT_DIR$/cmd" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/main" />
       <recent name="$PROJECT_DIR$/consensus" />
       <recent name="$PROJECT_DIR$/eventbus" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docker/payload" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/cmd/utils" />
-      <recent name="$PROJECT_DIR$/cmd" />
-      <recent name="$PROJECT_DIR$/p2pserver" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -451,7 +405,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestLevelDB in dan-road-vbft/core/store/leveldbstore">
+  <component name="RunManager" selected="Go Test.TestSignTX in dan-road-vbft/consensus/vbft">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="dan-road-vbft" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -462,22 +416,15 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestInitVbftBlock in dan-road-vbft/consensus/vbft" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dan-road-vbft" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/consensus/vbft" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="dan-road-vbft/consensus/vbft" />
       <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="dan-road-vbft" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main/main.go" />
-      <package value="awesomeProject" />
-      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestInitVbftBlock$" />
       <method v="2" />
     </configuration>
     <configuration name="TestLevelDB in dan-road-vbft/core/store/leveldbstore" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -491,15 +438,37 @@
       <pattern value="^TestLevelDB$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestVrf in dan-road-vbft/crypto/vrf" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSignMsg in dan-road-vbft/http/base/rest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dan-road-vbft" />
-      <working_directory value="$PROJECT_DIR$/crypto/vrf" />
+      <working_directory value="$PROJECT_DIR$/http/base/rest" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dan-road-vbft/crypto/vrf" />
+      <package value="dan-road-vbft/http/base/rest" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestVrf$" />
+      <pattern value="^TestSignMsg$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="dan-road-vbft" />
+      <working_directory value="$PROJECT_DIR$/consensus/vbft" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="dan-road-vbft/consensus/vbft" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestSignTX$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSignTX in dan-road-vbft/http/base/rest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="dan-road-vbft" />
+      <working_directory value="$PROJECT_DIR$/http/base/rest" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="dan-road-vbft/http/base/rest" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestSignTX$" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -513,49 +482,53 @@
       <filePath value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="payload/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="JSONFilePath" value="" />
-          <option name="command" value="" />
-          <option name="commandLineOptions" value="" />
-          <option name="containerName" value="" />
-          <option name="entrypoint" value="" />
-          <option name="imageTag" value="" />
-          <option name="sourceFilePath" value="$PROJECT_DIR$/docker/payload/Dockerfile" />
-          <option name="startBrowserSettings">
-            <browser url="http://127.0.0.1" />
-          </option>
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Go Build.go build main.go" />
-      <item itemvalue="Docker.payload/Dockerfile" />
-      <item itemvalue="Go Build.go build main.go (1)" />
-      <item itemvalue="Go Test.TestVrf in dan-road-vbft/crypto/vrf" />
       <item itemvalue="Go Test.TestLevelDB in dan-road-vbft/core/store/leveldbstore" />
+      <item itemvalue="Go Test.TestSignMsg in dan-road-vbft/http/base/rest" />
+      <item itemvalue="Go Test.TestSignTX in dan-road-vbft/http/base/rest" />
+      <item itemvalue="Go Test.TestInitVbftBlock in dan-road-vbft/consensus/vbft" />
+      <item itemvalue="Go Test.TestSignTX in dan-road-vbft/consensus/vbft" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestSignTX in dan-road-vbft/consensus/vbft" />
+        <item itemvalue="Go Test.TestInitVbftBlock in dan-road-vbft/consensus/vbft" />
+        <item itemvalue="Go Test.TestSignTX in dan-road-vbft/http/base/rest" />
+        <item itemvalue="Go Test.TestSignMsg in dan-road-vbft/http/base/rest" />
         <item itemvalue="Go Test.TestLevelDB in dan-road-vbft/core/store/leveldbstore" />
-        <item itemvalue="Go Build.go build main.go (1)" />
-        <item itemvalue="Docker.payload/Dockerfile" />
-        <item itemvalue="Go Test.TestVrf in dan-road-vbft/crypto/vrf" />
-        <item itemvalue="Docker.payload/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestVrf_in_dan-road-vbft_crypto_vrf - 2018.12.01 at 16h 11m 35s.xml">
-      <configuration name="TestVrf in dan-road-vbft/crypto/vrf" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 12h 59m 25s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestLevelDB_in_dan-road-vbft_core_store_leveldbstore - 2019.05.26 at 16h 40m 41s.xml">
-      <configuration name="TestLevelDB in dan-road-vbft/core/store/leveldbstore" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 13h 00m 25s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestLevelDB_in_dan-road-vbft_core_store_leveldbstore - 2019.05.26 at 16h 41m 21s.xml">
-      <configuration name="TestLevelDB in dan-road-vbft/core/store/leveldbstore" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 13h 07m 37s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 13h 08m 38s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 13h 10m 01s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 13h 10m 25s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 13h 12m 29s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 13h 13m 21s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 13h 14m 32s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignTX_in_dan-road-vbft_consensus_vbft - 2019.06.18 at 13h 15m 53s.xml">
+      <configuration name="TestSignTX in dan-road-vbft/consensus/vbft" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -569,20 +542,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19241774" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09298999" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23253012" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27108434" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32970297" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4985694" weight="0.27349398" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" visible="true" weight="0.26746988" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4985694" weight="0.11325301" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" weight="0.21980198" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="12" weight="0.32891566" />
@@ -633,104 +607,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="vrf" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/peer_pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4123">
-          <caret line="224" column="22" selection-start-line="224" selection-start-column="22" selection-end-line="224" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/config/genesis_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/block_pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8797">
-          <caret line="473" column="23" selection-start-line="473" selection-start-column="23" selection-end-line="473" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/event_timer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/states/storage_key.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/genesis/genesis.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/param.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="525" column="13" selection-start-line="525" selection-start-column="13" selection-end-line="525" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/states.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/config/genesis.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcontract/service/native/governance/method.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="537" column="5" selection-start-line="537" selection-start-column="5" selection-end-line="537" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/node_utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="216" column="19" selection-start-line="216" selection-start-column="19" selection-end-line="216" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/address.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -850,38 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/service.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39881">
-          <caret line="2126" column="42" selection-start-line="2126" selection-start-column="28" selection-end-line="2126" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1919">
-          <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consensus/vbft/types.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="76" column="21" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_builder.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4332">
-          <caret line="240" column="26" selection-start-line="240" selection-start-column="26" selection-end-line="240" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -906,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consensus/vbft/state_mgmt.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6004">
-          <caret line="320" column="9" selection-start-line="320" selection-start-column="9" selection-end-line="320" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4940">
@@ -920,10 +761,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/restful/restful/server.go">
+    <entry file="file://$PROJECT_DIR$/../github.com/ontio/ontology-go-sdk/ont_sdk.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2641">
-          <caret line="154" column="70" selection-start-line="154" selection-start-column="70" selection-end-line="154" selection-end-column="70" />
+        <state relative-caret-position="551">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/types/transaction.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -955,6 +803,135 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/http/restful/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/restful/restful/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/state_mgmt.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/peer_pool.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="213" column="22" selection-start-line="213" selection-start-column="22" selection-end-line="213" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.11.1/libexec/src/crypto/elliptic/p224.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.11.1/libexec/src/crypto/crypto.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto/vrf/vrf.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto/vrf/vrf_ec.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.11.1/libexec/src/crypto/elliptic/elliptic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4674">
+          <caret line="250" column="26" selection-start-line="250" selection-start-column="26" selection-end-line="250" selection-end-column="26" />
+          <folding>
+            <element signature="e#706#742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto/keypair/key.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.11.1/libexec/src/crypto/ecdsa/ecdsa.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto/ec/key.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11761">
+          <caret line="646" column="39" selection-start-line="646" selection-start-column="39" selection-end-line="646" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_builder.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3667">
+          <caret line="205" column="41" selection-start-line="205" selection-start-column="31" selection-end-line="205" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/msg_pool.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="127" column="12" lean-forward="true" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/utils_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/ontio/ontology-go-sdk/wallet.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="249" selection-start-line="249" selection-end-line="249" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wallet.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -962,31 +939,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/types/transaction.go">
+    <entry file="file://$PROJECT_DIR$/http/base/rest/interfaces_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="114">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/ontio/ontology-go-sdk/ont_sdk.go">
+    <entry file="file:///usr/local/Cellar/go/1.11.1/libexec/src/os/file.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="204">
+          <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/restful/server.go">
+    <entry file="file://$PROJECT_DIR$/consensus/vbft/types_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="26">
+          <caret line="208" column="25" selection-start-line="208" selection-start-column="25" selection-end-line="208" selection-end-column="25" />
+          <folding>
+            <element signature="e#14#146#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/http/base/rest/interfaces.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-917">
-          <caret line="272" selection-start-line="272" selection-end-line="272" />
+        <state relative-caret-position="196">
+          <caret line="263" column="42" lean-forward="true" selection-start-line="263" selection-start-column="42" selection-end-line="263" selection-end-column="42" />
           <folding>
             <element signature="e#781#1215#0" expanded="true" />
           </folding>
