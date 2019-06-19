@@ -1,10 +1,8 @@
 package vbft
 
 import (
-	"bufio"
 	"bytes"
 	"fmt"
-	"os"
 	"reflect"
 	"testing"
 
@@ -209,16 +207,16 @@ func TestInitVbftBlock(t *testing.T) {
 func TestSignTX(t *testing.T) {
 	sdk := goSdk.NewOntologySdk()
 	//sdk.NewRpcClient().SetAddress("http://172.17.0.2:20336")
-	wallet, err := sdk.OpenWallet("/Users/lixiaohan/Library/go/src/dan-road-vbft/wallet.dat")
+	wallet, err := sdk.OpenWallet("../../wallet.dat")
 	if err != nil {
 		fmt.Println(err)
 	}
 	from, err := wallet.GetAccountByAddress("ANRryVJESVNodWvtVcrkLqMimzqGe7jBSZ", []byte("1"))
 	to, err := wallet.GetAccountByAddress("AGna5UaixJTZcUkijCnM8n8hifmjCySjTc", []byte("2"))
 
-	var f *os.File
-	var err1 error
-	for i := 0; i < 1000; i++ {
+	//var f *os.File
+	//var err1 error
+	for i := 0; i < 2000; i++ {
 		tx, err := sdk.Native.Ont.NewTransferTransaction(500, 30000, from.Address, to.Address, 1)
 		err = sdk.SignToTransaction(tx, from)
 		txbf := new(bytes.Buffer)
@@ -231,13 +229,12 @@ func TestSignTX(t *testing.T) {
 		hexCode := common.ToHexString(txbf.Bytes())
 		fmt.Println(hexCode)
 
-		f, err1 = os.OpenFile("/Users/lixiaohan/Desktop/cvbft.txt", os.O_APPEND, 0666)
-		w := bufio.NewWriter(f)
-		fmt.Fprintln(w, hexCode)
-		if err1 != nil {
-			fmt.Println(err1)
-		}
-
+		//f, err1 = os.OpenFile("/Users/lixiaohan/Desktop/data.txt", os.O_APPEND, 0666)
+		//w := bufio.NewWriter(f)
+		//fmt.Fprintln(w, hexCode)
+		//if err1 != nil {
+		//	fmt.Println(err1)
+		//}
 	}
-	f.Close()
+	//f.Close()
 }
