@@ -1366,6 +1366,7 @@ func (self *Server) actionLoop() {
 				}
 
 			case CommitBlock:
+				return
 				blkNum := action.Proposal.GetBlockNum()
 				if err := self.commitBlock(action.Proposal, action.forEmpty); err != nil {
 					log.Errorf("server %d failed to commit block proposal (%d): %s",
